@@ -9,7 +9,8 @@
   "dependencies": {
     "angular": "~1.3.13",
     "angular-bootstrap": "~0.12.0",
-    "bootstrap": "~3.3.2"
+    "bootstrap": "~3.3.2",
+    "ngInfiniteScroll": "1.0.0"
   },
   "name": "pablolam-backend",
   "version": "0.0.0",
