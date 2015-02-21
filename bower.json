@@ -1,0 +1,14 @@
+{
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "name": "pablolam-backend",
+  "version": "0.0.0",
+  "author": "anonymous node/sails user",
+  "private": true
+}
