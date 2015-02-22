@@ -45,6 +45,10 @@ module.exports = {
         tweets[i].created_at = data[i].created_at
       }
       
+      //Tweet.create({herp: "asdf"}).exec(console.log)
+      Tweet.create(tweets).exec(console.log)
+      
+      //Tweet.create(tweets)
       fs.writeFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
       
     })

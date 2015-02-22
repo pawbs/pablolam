@@ -30,7 +30,9 @@ describe('FeedTweetController', function() {
   
   describe('#push()', function() {
     it('should push tweets to db', function (done) {
-
+      this.timeout(10000)
+    
+      console.log(app)
       FeedTweetController.dbPush()
     
     });
