@@ -13,8 +13,9 @@ module.exports = {
    * `FeedTweetController.dbPush()`
    */
   dbPush: function (req, res) {
+
+    sails.log("pushing tweets to db");
     return res.json({
-      todo: 'dbPush() is not implemented yet!'
     });
   },
 
@@ -23,8 +24,9 @@ module.exports = {
    * `FeedTweetController.dbPull()`
    */
   dbPull: function (req, res) {
+
+    sails.log.info("pulling tweets from db");
     return res.json({
-      todo: 'dbPull() is not implemented yet!'
     });
   }
 };
