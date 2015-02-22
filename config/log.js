@@ -9,7 +9,7 @@
  * For more information on the Sails logger, check out:
  * http://sailsjs.org/#/documentation/concepts/Logging
  */
-
+    
 module.exports.log = {
 
   /***************************************************************************
@@ -23,7 +23,6 @@ module.exports.log = {
   * You may also set the level to "silent" to suppress all logs.             *
   *                                                                          *
   ***************************************************************************/
-
-  // level: 'info'
-
+  level: 'silly',
+  filePath: 'sails.log'
 };

@@ -14,9 +14,8 @@ module.exports = {
    */
   dbPush: function (req, res) {
 
-    sails.log("pushing tweets to db");
-    return res.json({
-    });
+    sails.log.info("pushing tweets to db");
+    sails.log.info();
   },
 
 
@@ -26,8 +25,6 @@ module.exports = {
   dbPull: function (req, res) {
 
     sails.log.info("pulling tweets from db");
-    return res.json({
-    });
   }
 };
 
