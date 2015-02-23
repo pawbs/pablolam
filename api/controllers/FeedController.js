@@ -5,6 +5,8 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
+var fs = require('fs')
+ 
 module.exports = {
 
   /**
@@ -12,21 +14,14 @@ module.exports = {
    */
   dbPush: function (req, res) {
   
-    var tweets = Tweet.find().exec(console.log)
-    //console.log(tweets)
+    Tweet.find({}).exec(function findCB(err,tweets){
+      console.log(tweets)
+      Feed.create(tweets).exec(function emptyCB(err,tweets){
+        console.log(err)
+      })
+      fs.writeFile('feed.json', JSON.stringify(tweets, null, 4))
+    })
     
-    Feed.create(tweets).exec(console.log)
-  
-  },
-
-
-  /**
-   * `FeedController.dbPull()`
-   */
-  dbPull: function (req, res) {
-    return res.json({
-    
-    });
   }
 };
 

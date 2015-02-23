@@ -1,0 +1,141 @@
+
+[32minfo: [39m[90mStarting app...[39m
+
+[36mverbose: [39mlogger hook loaded successfully.
+[36mverbose: [39mrequest hook loaded successfully.
+[36mverbose: [39mLoading the app's models and adapters...
+[36mverbose: [39mLoading app models...
+[36mverbose: [39mLoading app adapters...
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Building action for view:  index
+[36mverbose: [39mLoading blueprint middleware...
+[36mverbose: [39mblueprints hook loaded successfully.
+[36mverbose: [39mresponses hook loaded successfully.
+[36mverbose: [39mcontrollers hook loaded successfully.
+[36mverbose: [39mLoading policy modules from app...
+[36mverbose: [39mFinished loading policy middleware logic.
+[36mverbose: [39mpolicies hook loaded successfully.
+[36mverbose: [39mservices hook loaded successfully.
+[36mverbose: [39mcsrf hook loaded successfully.
+[36mverbose: [39mcors hook loaded successfully.
+[36mverbose: [39mi18n hook loaded successfully.
+[36mverbose: [39msession hook loaded successfully.
+[36mverbose: [39mLoading app Gruntfile...
+[36mverbose: [39mTracking new grunt child process...
+[36mverbose: [39mgrunt hook loaded successfully.
+[36mverbose: [39mhttp hook loaded successfully.
+[36mverbose: [39mPreparing socket.io...
+[36mverbose: [39msockets hook loaded successfully.
+[36mverbose: [39mLoading adapter ( sails-mongo ) for feed  from `node_modules` directory...
+[36mverbose: [39mviews hook loaded successfully.
+[36mverbose: [39mSetting default Express view engine to html...
+[36mverbose: [39mStarting ORM...
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Registering model `feed` in Waterline (ORM)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Registering model `tweet` in Waterline (ORM)
+[36mverbose: [39morm hook loaded successfully.
+[36mverbose: [39mpubsub hook loaded successfully.
+[36mverbose: [39mBuilt-in hooks are ready.
+[36mverbose: [39mInstantiating registry...
+[36mverbose: [39mLoading router...
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  all /* (REQUEST HOOK: addMixins)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  all /* (RESPONSES HOOK: addResponseMethods)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  all /* (I18N HOOK: addLocalizationMethod)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  all /* (VIEWS HOOK: addResViewMethod)
+[36mverbose: [39mPolicy-controller bindings complete!
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /* (CSRF HOOK: CSRF)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  all /* (CORS HOOK: clearHeaders)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /csrfToken (CORS HOOK: sendHeaders)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  options /csrftoken (CORS HOOK: preflight)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   / (FUNCTION: rememberViewId)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   / (FUNCTION: serveView)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /csrfToken (FUNCTION: csrfToken)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  get /__getcookie (SOCKETS HOOK)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (dbpush) blueprint/shadow route for controller: feed
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/dbpush/:id? (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/dbpush/:id? (ACTION: feed/dbpush)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (identity) blueprint/shadow route for controller: feed
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (globalid) blueprint/shadow route for controller: feed
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (sails) blueprint/shadow route for controller: feed
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding shortcut blueprint/shadow routes for model  feed  on controller: feed
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/find (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/find (BLUEPRINT: findRecords)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/find/:id (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/find/:id (BLUEPRINT: findOneRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/create (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/create (BLUEPRINT: createRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/update/:id (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/update/:id (BLUEPRINT: updateOneRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/destroy/:id? (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feed/destroy/:id? (BLUEPRINT: destroyOneRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding RESTful blueprint/shadow routes for model+controller: feed
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  get /feed (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  get /feed (BLUEPRINT: findRecords)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  get /feed/:id (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  get /feed/:id (BLUEPRINT: findOneRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  post /feed (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  post /feed (BLUEPRINT: createRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  put /feed/:id (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  put /feed/:id (BLUEPRINT: updateOneRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  post /feed/:id (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  post /feed/:id (BLUEPRINT: updateOneRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  delete /feed/:id? (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  delete /feed/:id? (BLUEPRINT: destroyOneRecord)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (dbpush) blueprint/shadow route for controller: feedtweet
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feedtweet/dbpush/:id? (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feedtweet/dbpush/:id? (ACTION: feedtweet/dbpush)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (dbpull) blueprint/shadow route for controller: feedtweet
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feedtweet/dbpull/:id? (POLICY: alwaysAllow)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::   /feedtweet/dbpull/:id? (ACTION: feedtweet/dbpull)
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (identity) blueprint/shadow route for controller: feedtweet
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (globalid) blueprint/shadow route for controller: feedtweet
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding action (sails) blueprint/shadow route for controller: feedtweet
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Binding route ::  get /csrfToken (FUNCTION: csrfToken)
+[36mverbose: [39mAll hooks were loaded successfully.
+[36mverbose: [39mStarting app at C:\Users\pawBs\Documents\pablolam...
+[36mverbose: [39mRunning the setup logic in `sails.config.bootstrap(cb)`...
+[32minfo: [39m
+[32minfo: [39m               .-..-.
+[32minfo: [39m
+[32minfo: [39m   Sails              <|    .-..-.
+[32minfo: [39m   v0.11.0             |\
+[32minfo: [39m                      /|.\
+[32minfo: [39m                     / || \
+[32minfo: [39m                   ,'  |'  \
+[32minfo: [39m                .-'.-==|/_--'
+[32minfo: [39m                `--'-------' 
+[32minfo: [39m   __---___--___---___--___---___--___
+[32minfo: [39m ____---___--___---___--___---___--___-__
+[32minfo: [39m
+[32minfo: [39mServer lifted in `C:\Users\pawBs\Documents\pablolam`
+[32minfo: [39mTo see your app, visit [4mhttp://localhost:1337[24m
+[32minfo: [39mTo shut down Sails, press <CTRL> + C at any time.
+[37m[39m
+[37m[39m
+[36mverbose: [39mGrunt :: [4mRunning "clean:dev" (clean) task[24m
+[36mverbose: [39mGrunt :: Cleaning .tmp/public...
+[36mverbose: [39mGrunt :: [32mOK[39m
+[36mverbose: [39mGrunt :: [4mRunning "jst:dev" (jst) task[24m
+[36mverbose: [39mGrunt :: [31m>> [39mDestination not written because compiled files were empty.
+[36mverbose: [39mGrunt :: [4mRunning "less:dev" (less) task[24m
+[36mverbose: [39mGrunt :: File .tmp/public/styles/importer.css created: 0 B → 809 B
+[36mverbose: [39mGrunt :: [4mRunning "copy:dev" (copy) task[24m
+[36mverbose: [39mGrunt :: Copied [36m147[39m files
+[36mverbose: [39mGrunt :: [4mRunning "coffee:dev" (coffee) task[24m
+[36mverbose: [39mGrunt :: [4mRunning "sails-linker:devJs" (sails-linker) task[24m
+[36mverbose: [39mGrunt :: [4mRunning "sails-linker:devStyles" (sails-linker) task[24m
+[36mverbose: [39mGrunt :: [4mRunning "sails-linker:devTpl" (sails-linker) task[24m
+[36mverbose: [39mGrunt :: [4mRunning "sails-linker:devJsJade" (sails-linker) task[24m
+[36mverbose: [39mGrunt :: [4mRunning "sails-linker:devStylesJade" (sails-linker) task[24m
+[36mverbose: [39mGrunt :: [4mRunning "sails-linker:devTplJade" (sails-linker) task[24m
+[36mverbose: [39mGrunt :: [4mRunning "watch" task[24m
+[36mverbose: [39mGrunt :: Waiting...
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Serving view at rel path:  index
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m View root:  C:\Users\pawBs\Documents\pablolam\views
+[36mverbose: [39mRendering view: "index" (located @ "C:\Users\pawBs\Documents\pablolam\views\index")
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m Serving view at rel path:  index
+[31ms[39m[33mi[39m[32ml[39m[34ml[39m[35my[39m[31m:[39m View root:  C:\Users\pawBs\Documents\pablolam\views
+[36mverbose: [39mRendering view: "index" (located @ "C:\Users\pawBs\Documents\pablolam\views\index")
+[36mverbose: [39mLowering sails...
+[36mverbose: [39mSent kill signal to child process (8252)...
+[36mverbose: [39mShutting down socket server...
+[36mverbose: [39mShutting down HTTP server...
+Terminate batch job (Y/N)? 
