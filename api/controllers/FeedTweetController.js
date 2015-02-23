@@ -30,10 +30,7 @@ module.exports = {
     })
     
     T.get('statuses/user_timeline', { user_id: 'pawbs' , count: 100 }, function(err, data, response) {
-      //console.log(data)
       fs.writeFile('twitResponse.json', JSON.stringify(data, null, 4))
-      
-      //tweets=[data.length];
       
       for (i in data) {
         tweets[i] = {}
@@ -45,10 +42,7 @@ module.exports = {
         tweets[i].created_at = data[i].created_at
       }
       
-      //Tweet.create({herp: "asdf"}).exec(console.log)
       Tweet.create(tweets).exec(console.log)
-      
-      //Tweet.create(tweets)
       fs.writeFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
       
     })
