@@ -40,6 +40,7 @@ module.exports = {
         tweets[i].favorite_count = data[i].favorite_count
         tweets[i].entities = data[i].entities
         tweets[i].created_at = data[i].created_at
+        tweets[i].type = "twitter"
       }
       
       Tweet.create(tweets).exec(console.log)
@@ -59,6 +60,10 @@ module.exports = {
   dbPull: function (req, res) {
 
     sails.log.info("pulling tweets from db");
+    return(Tweet.find().exec(console.log))
+    
   }
+   
+   
 };
 

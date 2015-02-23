@@ -1,8 +1,8 @@
 var assert = require('assert');
-var FeedTweetController = require('../api/controllers/FeedTweetController.js');
+var FeedController = require('../api/controllers/FeedController.js');
 var Sails = require('sails');
 
-describe('FeedTweetController', function() {
+describe('FeedController', function() {
 
   // create a variable to hold the instantiated sails server
   var app;
@@ -33,8 +33,8 @@ describe('FeedTweetController', function() {
       this.timeout(10000)
     
       console.log(app)
-      FeedTweetController.dbPush()
-      //console.log(FeedTweetController.dbPull())
+      FeedController.dbPush()
+      //console.log(FeedController.dbPull())
     
     });
   });

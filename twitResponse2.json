@@ -1,5 +1,57 @@
 [
     {
+        "text": "starting new pet project; I don't know how anyone can be prouctive on only *one* monitor.. http://t.co/7yUkWzd7li",
+        "id_str": "569660433759649792",
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 569660432814600200,
+                    "id_str": "569660432814600192",
+                    "indices": [
+                        91,
+                        113
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/B-fXJTyCcAAnEnN.png",
+                    "media_url_https": "https://pbs.twimg.com/media/B-fXJTyCcAAnEnN.png",
+                    "url": "http://t.co/7yUkWzd7li",
+                    "display_url": "pic.twitter.com/7yUkWzd7li",
+                    "expanded_url": "http://twitter.com/pawBs/status/569660433759649792/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 600,
+                            "h": 337,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 575,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 340,
+                            "h": 191,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "created_at": "Mon Feb 23 00:50:05 +0000 2015",
+        "type": "twitter"
+    },
+    {
         "text": "nothing says tenacity quite like asian grandma's biking in heavy snowfall carrying 2 loaded plastic bags of groceries in really ghetto bikes",
         "id_str": "569543678617722880",
         "retweet_count": 0,
@@ -10,7 +62,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Sun Feb 22 17:06:09 +0000 2015"
+        "created_at": "Sun Feb 22 17:06:09 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "say what you want about league of legends but they really know how to make content for a f2p game; dat dj sona skin doe",
@@ -23,7 +76,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Fri Feb 20 06:28:25 +0000 2015"
+        "created_at": "Fri Feb 20 06:28:25 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "My $700 dollar phones only job is to play music on my commute and it sucks at doing it",
@@ -36,7 +90,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Tue Feb 17 13:17:47 +0000 2015"
+        "created_at": "Tue Feb 17 13:17:47 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "My android is suicidal...",
@@ -49,7 +104,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Tue Feb 17 13:14:29 +0000 2015"
+        "created_at": "Tue Feb 17 13:14:29 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "RT @bwnzhng: I think I'm going crazy. #TeamNoSleep",
@@ -81,7 +137,8 @@
             ],
             "urls": []
         },
-        "created_at": "Fri Feb 13 13:08:19 +0000 2015"
+        "created_at": "Fri Feb 13 13:08:19 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "Clocked in 12 hours of sleep today; it feels as good as it sounds",
@@ -94,7 +151,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Feb 11 12:52:38 +0000 2015"
+        "created_at": "Wed Feb 11 12:52:38 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "Huge black guy in a unicycle downtown and nobody bats an eye O_____O",
@@ -107,7 +165,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Sat Feb 07 19:06:48 +0000 2015"
+        "created_at": "Sat Feb 07 19:06:48 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@leafdust whoa, neat",
@@ -131,7 +190,8 @@
             ],
             "urls": []
         },
-        "created_at": "Thu Feb 05 00:22:14 +0000 2015"
+        "created_at": "Thu Feb 05 00:22:14 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@stephiemt dump siracha sauce on it and it will all taste the same *thumbs up*",
@@ -155,7 +215,8 @@
             ],
             "urls": []
         },
-        "created_at": "Thu Feb 05 00:20:06 +0000 2015"
+        "created_at": "Thu Feb 05 00:20:06 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "RT @mquach: You may like @jono_unltd RT @IGN: The Simpsons opening got recreated in pixel art: http://t.co/32P3xWERcD http://t.co/CClgVvogMP",
@@ -251,7 +312,8 @@
                 }
             ]
         },
-        "created_at": "Tue Feb 03 23:59:30 +0000 2015"
+        "created_at": "Tue Feb 03 23:59:30 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@kendrew yep, z3",
@@ -275,7 +337,8 @@
             ],
             "urls": []
         },
-        "created_at": "Tue Feb 03 02:49:48 +0000 2015"
+        "created_at": "Tue Feb 03 02:49:48 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "An update daemon single handedly crashed my xperia... My phone is *soooo* getting rooted tonight",
@@ -288,7 +351,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Feb 02 23:42:27 +0000 2015"
+        "created_at": "Mon Feb 02 23:42:27 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "Why is every android music app unstable.... This is ridiculous and infurating I can't play any of my music #missmyiphone",
@@ -309,7 +373,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Feb 02 23:26:47 +0000 2015"
+        "created_at": "Mon Feb 02 23:26:47 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "RT @michaeljywong: I'm most active on twitter when the weather is shitty. I like reading and relating to the struggle. ❄️❄️❄️",
@@ -333,7 +398,8 @@
             ],
             "urls": []
         },
-        "created_at": "Mon Feb 02 13:30:31 +0000 2015"
+        "created_at": "Mon Feb 02 13:30:31 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "Happy everybody-is-going-to-be-late-for-work day",
@@ -346,7 +412,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Feb 02 12:13:13 +0000 2015"
+        "created_at": "Mon Feb 02 12:13:13 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "heard this at kinton ramen of all places; korean electrohouse&lt;3 #nowplaying Oriental Funk Stew - Deep Inside of Love  http://t.co/yoNo1jB12P",
@@ -377,7 +444,8 @@
                 }
             ]
         },
-        "created_at": "Mon Feb 02 06:12:26 +0000 2015"
+        "created_at": "Mon Feb 02 06:12:26 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "r/Vocaloid; the subreddit where every post is about figures and posters, and none of it is music",
@@ -390,7 +458,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Fri Jan 30 04:04:46 +0000 2015"
+        "created_at": "Fri Jan 30 04:04:46 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "korean items on ebay are a lot more expensive than ones from china, but MAN the quality is MILES better",
@@ -403,7 +472,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Jan 28 23:59:49 +0000 2015"
+        "created_at": "Wed Jan 28 23:59:49 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "RT @followwes: Let's make Bell bankrupt #BellLetsTalk",
@@ -435,7 +505,8 @@
             ],
             "urls": []
         },
-        "created_at": "Wed Jan 28 18:16:39 +0000 2015"
+        "created_at": "Wed Jan 28 18:16:39 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "If anyone wants my keyboard, it got dropped on @Massdrop today http://t.co/CUE35goIgL it's tenkeyless and comes with cherry MX blue switches",
@@ -469,7 +540,8 @@
                 }
             ]
         },
-        "created_at": "Wed Jan 28 13:15:40 +0000 2015"
+        "created_at": "Wed Jan 28 13:15:40 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@theJoannaTsui Such role model for the underclassmen :D",
@@ -493,7 +565,8 @@
             ],
             "urls": []
         },
-        "created_at": "Mon Jan 26 23:17:43 +0000 2015"
+        "created_at": "Mon Jan 26 23:17:43 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@followwes Somebody monetizes a scavenger hunt for a crap load of money",
@@ -517,7 +590,8 @@
             ],
             "urls": []
         },
-        "created_at": "Sun Jan 25 12:59:13 +0000 2015"
+        "created_at": "Sun Jan 25 12:59:13 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@jono_unltd dont watch basketball.... but wow.. aimbot hacks https://t.co/RhnCJj2v12",
@@ -551,7 +625,8 @@
                 }
             ]
         },
-        "created_at": "Sat Jan 24 13:06:59 +0000 2015"
+        "created_at": "Sat Jan 24 13:06:59 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@leafdust Mine was I minute early, google maps betrayed me http://t.co/NEW8fEdDi1",
@@ -613,7 +688,8 @@
                 }
             ]
         },
-        "created_at": "Wed Jan 21 12:38:22 +0000 2015"
+        "created_at": "Wed Jan 21 12:38:22 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@leafdust Same TT_______TT",
@@ -637,7 +713,8 @@
             ],
             "urls": []
         },
-        "created_at": "Wed Jan 21 12:36:59 +0000 2015"
+        "created_at": "Wed Jan 21 12:36:59 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "201 days....",
@@ -650,7 +727,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Jan 21 07:45:57 +0000 2015"
+        "created_at": "Wed Jan 21 07:45:57 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@chopzsite set a few alarm clocks by your bedside, and so a sit up every time you hit snooze. There, morning exercise &lt;thumbs up&gt;",
@@ -674,7 +752,8 @@
             ],
             "urls": []
         },
-        "created_at": "Tue Jan 20 11:36:39 +0000 2015"
+        "created_at": "Tue Jan 20 11:36:39 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@acinnej_ know that feeling.. The worst is when you somehow get the spy role for 3 games in a row &lt;flip table&gt;",
@@ -698,7 +777,8 @@
             ],
             "urls": []
         },
-        "created_at": "Mon Jan 19 05:24:41 +0000 2015"
+        "created_at": "Mon Jan 19 05:24:41 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "I love this city",
@@ -711,7 +791,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Jan 19 01:39:36 +0000 2015"
+        "created_at": "Mon Jan 19 01:39:36 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "TIL Nathan Philips skating is open even when it rains; ....this is SOOOO DANGEROUS",
@@ -724,7 +805,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Jan 19 00:10:19 +0000 2015"
+        "created_at": "Mon Jan 19 00:10:19 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "hungry and cant sleep #nowplaying Draper - Coloured Glass http://t.co/2uxoFyfWE5",
@@ -755,7 +837,8 @@
                 }
             ]
         },
-        "created_at": "Sun Jan 18 06:12:52 +0000 2015"
+        "created_at": "Sun Jan 18 06:12:52 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@leafdust whoaaa legit",
@@ -779,7 +862,8 @@
             ],
             "urls": []
         },
-        "created_at": "Sat Jan 17 05:08:31 +0000 2015"
+        "created_at": "Sat Jan 17 05:08:31 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@aerdnaeel in my head, i was pronouncing it like \"Aard Neil\"; this realization blew my mind while i was eating a sandwich in the break room",
@@ -803,7 +887,8 @@
             ],
             "urls": []
         },
-        "created_at": "Fri Jan 16 05:11:05 +0000 2015"
+        "created_at": "Fri Jan 16 05:11:05 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@aerdnaeel I just noticed that your twitter handle is \"leeandrea\" backwards #whoa",
@@ -835,7 +920,8 @@
             ],
             "urls": []
         },
-        "created_at": "Thu Jan 15 18:19:10 +0000 2015"
+        "created_at": "Thu Jan 15 18:19:10 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "RT @SarahCAndersen: How headphones affect music http://t.co/2MlG4MNwk1",
@@ -869,7 +955,8 @@
                 }
             ]
         },
-        "created_at": "Thu Jan 15 00:37:43 +0000 2015"
+        "created_at": "Thu Jan 15 00:37:43 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "Getting FedEx packages is like Christmas :D smile every time",
@@ -882,7 +969,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Jan 12 23:21:23 +0000 2015"
+        "created_at": "Mon Jan 12 23:21:23 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@antonia0529 Good luck!!!!!! :DDDDDD",
@@ -906,7 +994,8 @@
             ],
             "urls": []
         },
-        "created_at": "Mon Jan 12 01:17:39 +0000 2015"
+        "created_at": "Mon Jan 12 01:17:39 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "kanColle the ANIME; its kinda like gundam.. but instead of robots, its schoolgirls with WW2 artillery straped to their arms and backs #japan",
@@ -927,7 +1016,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Sun Jan 11 03:06:00 +0000 2015"
+        "created_at": "Sun Jan 11 03:06:00 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "10 hours of sleep yesterday! Going to try going caffeine free today",
@@ -940,7 +1030,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Thu Jan 08 12:16:15 +0000 2015"
+        "created_at": "Thu Jan 08 12:16:15 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "#JeSuisCharlie http://t.co/NsQrF4iDut",
@@ -999,7 +1090,8 @@
                 }
             ]
         },
-        "created_at": "Thu Jan 08 00:14:47 +0000 2015"
+        "created_at": "Thu Jan 08 00:14:47 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "http://t.co/fC0fPvvZEq @followwes",
@@ -1033,7 +1125,8 @@
                 }
             ]
         },
-        "created_at": "Tue Jan 06 01:13:00 +0000 2015"
+        "created_at": "Tue Jan 06 01:13:00 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "http://t.co/wTg3hGvgk4 buying my 8th and 9th pair of m6s. I now literally own every color",
@@ -1056,7 +1149,8 @@
                 }
             ]
         },
-        "created_at": "Mon Jan 05 13:02:44 +0000 2015"
+        "created_at": "Mon Jan 05 13:02:44 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "RT @SarahCAndersen: Why my room is always messy http://t.co/HwYOzLexuR",
@@ -1090,7 +1184,8 @@
                 }
             ]
         },
-        "created_at": "Sat Jan 03 16:52:27 +0000 2015"
+        "created_at": "Sat Jan 03 16:52:27 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "I don't expect anything; i just want to see what happens next",
@@ -1103,7 +1198,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Fri Jan 02 07:58:01 +0000 2015"
+        "created_at": "Fri Jan 02 07:58:01 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "@amanda_yuan know that feeling! then you give up and just add your birthday to the end of it",
@@ -1127,7 +1223,8 @@
             ],
             "urls": []
         },
-        "created_at": "Fri Jan 02 06:37:15 +0000 2015"
+        "created_at": "Fri Jan 02 06:37:15 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "didnt like the original but this remix is BEAUTIFUL.. #nowplaying Porter Robinson - Lionhearted (Virtual Riot Remix): http://t.co/famtUQ6SCH",
@@ -1158,7 +1255,8 @@
                 }
             ]
         },
-        "created_at": "Fri Jan 02 06:32:43 +0000 2015"
+        "created_at": "Fri Jan 02 06:32:43 +0000 2015",
+        "type": "twitter"
     },
     {
         "text": "ONE.. TWO.. THREE.. FOUR!!!!! #nowplaying [Nu-Disco] The Knocks - Classic feat. Powers (Official Video): http://t.co/x0By1hhEYL via @YouTube",
@@ -1200,7 +1298,8 @@
                 }
             ]
         },
-        "created_at": "Wed Dec 31 06:37:33 +0000 2014"
+        "created_at": "Wed Dec 31 06:37:33 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@followwes when you get your summer job, buy a ps4; CoD errday lets go",
@@ -1224,7 +1323,8 @@
             ],
             "urls": []
         },
-        "created_at": "Wed Dec 31 05:27:32 +0000 2014"
+        "created_at": "Wed Dec 31 05:27:32 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "its so hard to hate madeon..; chiptune samples + 4/4kick + groovin bassline #nowplaying Madeon - You're On (ft. Kyan) http://t.co/9jYjf65BVf",
@@ -1255,7 +1355,8 @@
                 }
             ]
         },
-        "created_at": "Mon Dec 29 07:37:15 +0000 2014"
+        "created_at": "Mon Dec 29 07:37:15 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "&lt;turkey-itis-tweet here&gt;",
@@ -1268,7 +1369,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Fri Dec 26 00:22:25 +0000 2014"
+        "created_at": "Fri Dec 26 00:22:25 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@FillUpLee what did you end up getting? pics or it didnt happen",
@@ -1292,7 +1394,8 @@
             ],
             "urls": []
         },
-        "created_at": "Wed Dec 24 22:11:53 +0000 2014"
+        "created_at": "Wed Dec 24 22:11:53 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "mana starved...",
@@ -1305,7 +1408,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Dec 24 03:21:30 +0000 2014"
+        "created_at": "Wed Dec 24 03:21:30 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Rogers promo people get really mean when you bring up government and wind plans",
@@ -1318,7 +1422,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Dec 22 23:08:09 +0000 2014"
+        "created_at": "Mon Dec 22 23:08:09 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "(8)Im in love with a shooting star; #nowplaying Bag Raiders - Shooting Stars (Elephante Cover): http://t.co/me0auxGQq0 via @YouTube",
@@ -1360,7 +1465,8 @@
                 }
             ]
         },
-        "created_at": "Mon Dec 22 06:46:45 +0000 2014"
+        "created_at": "Mon Dec 22 06:46:45 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "APPLE MAPS I TRUSTED YOU http://t.co/ZZHQh24WTM",
@@ -1411,7 +1517,8 @@
                 }
             ]
         },
-        "created_at": "Sun Dec 21 00:27:41 +0000 2014"
+        "created_at": "Sun Dec 21 00:27:41 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "ferrero rocher with nutella spread on it &lt;3",
@@ -1424,7 +1531,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Sat Dec 20 18:02:47 +0000 2014"
+        "created_at": "Sat Dec 20 18:02:47 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "immediately right when i get home after a long day..: \"kono bangumi wa..- goran no SPONSAAH no teikyou de okurishimasu!!!\"",
@@ -1437,7 +1545,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Fri Dec 19 03:20:59 +0000 2014"
+        "created_at": "Fri Dec 19 03:20:59 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Eye geewwwww.... #tired",
@@ -1458,7 +1567,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Fri Dec 19 00:38:14 +0000 2014"
+        "created_at": "Fri Dec 19 00:38:14 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@jannnita neat! also, LOL at the thought of @amanda_yuan with a phonecam chasing you on your longboard",
@@ -1492,7 +1602,8 @@
             ],
             "urls": []
         },
-        "created_at": "Thu Dec 18 05:05:49 +0000 2014"
+        "created_at": "Thu Dec 18 05:05:49 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "i was meh about it, but now that its banned, i really want to watch it...... Kim Jong Un Death Scene (The Interview): http://t.co/GyKo2ZLEsN",
@@ -1515,7 +1626,8 @@
                 }
             ]
         },
-        "created_at": "Thu Dec 18 04:21:39 +0000 2014"
+        "created_at": "Thu Dec 18 04:21:39 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "\"Waiting for items to copy step 5/5\" ....yes, iTunes. I've been waiting for 30 minutes.... Why are you ALWAYS waiting?!?! JUST GO",
@@ -1528,7 +1640,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Dec 17 12:13:35 +0000 2014"
+        "created_at": "Wed Dec 17 12:13:35 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "...the wind spam is REAL #marketing",
@@ -1549,7 +1662,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Dec 17 00:06:32 +0000 2014"
+        "created_at": "Wed Dec 17 00:06:32 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "lolled - Nichijou - Mio Loses It: http://t.co/03Bnwn90Nf via @YouTube",
@@ -1583,7 +1697,8 @@
                 }
             ]
         },
-        "created_at": "Sat Dec 13 09:55:02 +0000 2014"
+        "created_at": "Sat Dec 13 09:55:02 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "there is no such thing as \"enough monitors\" http://t.co/bkWPzUhSRy",
@@ -1606,7 +1721,8 @@
                 }
             ]
         },
-        "created_at": "Sat Dec 13 07:43:22 +0000 2014"
+        "created_at": "Sat Dec 13 07:43:22 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Is it too late in life to learn drums",
@@ -1619,7 +1735,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Fri Dec 12 12:43:41 +0000 2014"
+        "created_at": "Fri Dec 12 12:43:41 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "&lt;torontonian-complaining-about-snow tweet here&gt;",
@@ -1632,7 +1749,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Thu Dec 11 14:11:42 +0000 2014"
+        "created_at": "Thu Dec 11 14:11:42 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "still building for late-game #nowplaying JKuch - French House Jk: http://t.co/RnMXM22X5u via @YouTube",
@@ -1674,7 +1792,8 @@
                 }
             ]
         },
-        "created_at": "Wed Dec 10 05:21:01 +0000 2014"
+        "created_at": "Wed Dec 10 05:21:01 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "some days, when you just cant even, you have to believe that there will be a day where you *can* even",
@@ -1687,7 +1806,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Dec 10 01:29:54 +0000 2014"
+        "created_at": "Wed Dec 10 01:29:54 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "setting up parents iPhone after an iOS update; I literally had to do \"i forgot my password\" on .. EVERY app........ #frustratedITGuy",
@@ -1708,7 +1828,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Tue Dec 09 01:02:11 +0000 2014"
+        "created_at": "Tue Dec 09 01:02:11 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "RT @SarahCAndersen: So I hear it's finals week in a distant far off land...*folds arms behind head* it's nice being an adult.",
@@ -1732,7 +1853,8 @@
             ],
             "urls": []
         },
-        "created_at": "Mon Dec 08 17:53:59 +0000 2014"
+        "created_at": "Mon Dec 08 17:53:59 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "wowwww.... i GG-ed my 4s... i cant even",
@@ -1745,7 +1867,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Dec 08 05:53:30 +0000 2014"
+        "created_at": "Mon Dec 08 05:53:30 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "lost 3 years of iTunes rating data O______O ..maybe its finally time to switch to an android phone",
@@ -1758,7 +1881,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Dec 08 05:33:40 +0000 2014"
+        "created_at": "Mon Dec 08 05:33:40 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "153 days.........",
@@ -1771,7 +1895,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Thu Dec 04 13:26:23 +0000 2014"
+        "created_at": "Thu Dec 04 13:26:23 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Thank goodness the office has infinite coffee",
@@ -1784,7 +1909,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Thu Dec 04 12:13:55 +0000 2014"
+        "created_at": "Thu Dec 04 12:13:55 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": ":DDDDDDDDDD http://t.co/csynLvDEoc",
@@ -1835,7 +1961,8 @@
                 }
             ]
         },
-        "created_at": "Thu Dec 04 00:42:41 +0000 2014"
+        "created_at": "Thu Dec 04 00:42:41 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "..-GENTLEMEN http://t.co/bE3WtcD1Fm",
@@ -1886,7 +2013,8 @@
                 }
             ]
         },
-        "created_at": "Thu Dec 04 00:39:04 +0000 2014"
+        "created_at": "Thu Dec 04 00:39:04 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "#fwp my resolution is too high for 95% of online wallpapers",
@@ -1907,7 +2035,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Wed Dec 03 02:50:15 +0000 2014"
+        "created_at": "Wed Dec 03 02:50:15 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "How did I get so hooked on vocaloids... #nowplaying livetune - tell your world",
@@ -1928,7 +2057,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Tue Dec 02 12:19:27 +0000 2014"
+        "created_at": "Tue Dec 02 12:19:27 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@michaeljywong they- are- definitely- never- going to implement that... LOL",
@@ -1952,7 +2082,8 @@
             ],
             "urls": []
         },
-        "created_at": "Tue Dec 02 12:09:34 +0000 2014"
+        "created_at": "Tue Dec 02 12:09:34 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Maximum sleepy....",
@@ -1965,7 +2096,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Dec 01 22:53:34 +0000 2014"
+        "created_at": "Mon Dec 01 22:53:34 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Everything is sore today X_____X",
@@ -1978,7 +2110,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Dec 01 12:46:05 +0000 2014"
+        "created_at": "Mon Dec 01 12:46:05 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Wow... The new corolla looks really nice.....",
@@ -1991,7 +2124,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Sun Nov 30 17:03:35 +0000 2014"
+        "created_at": "Sun Nov 30 17:03:35 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "'it gets so much worse...\" (warning: nudity and nightmare-fuel) #nowplaying ME!ME!ME!「ftDaoko TeddyLoid」 http://t.co/WZ1Ye9o2u0 via @YouTube",
@@ -2033,7 +2167,8 @@
                 }
             ]
         },
-        "created_at": "Sun Nov 30 08:47:37 +0000 2014"
+        "created_at": "Sun Nov 30 08:47:37 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@FillUpLee just get it now yolo",
@@ -2057,7 +2192,8 @@
             ],
             "urls": []
         },
-        "created_at": "Sat Nov 29 23:08:43 +0000 2014"
+        "created_at": "Sat Nov 29 23:08:43 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@FillUpLee everybody-and-a-half has the nexus 5 so you cant go wrong. You'll need to look hard for nexus 6, might be out of stock everywhere",
@@ -2081,7 +2217,8 @@
             ],
             "urls": []
         },
-        "created_at": "Sat Nov 29 22:35:13 +0000 2014"
+        "created_at": "Sat Nov 29 22:35:13 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "know dat feel RT @fionionion Saturday clean ups. I have way too much crap in my room. #byebyethings #tothegarbagecan #slighthoarder",
@@ -2127,7 +2264,8 @@
             ],
             "urls": []
         },
-        "created_at": "Sat Nov 29 22:29:09 +0000 2014"
+        "created_at": "Sat Nov 29 22:29:09 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@FillUpLee realistically, 25% of 1+1 owners have hit firmware issues; 0 support from the maker; its fixable but just save yourself headache",
@@ -2151,7 +2289,8 @@
             ],
             "urls": []
         },
-        "created_at": "Sat Nov 29 20:50:43 +0000 2014"
+        "created_at": "Sat Nov 29 20:50:43 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@FillUpLee dont buy the onePlus; i spent a whole saturday fixing firmware issues on my friend's phone; 6 plus is 22% off at newegg doit",
@@ -2175,7 +2314,8 @@
             ],
             "urls": []
         },
-        "created_at": "Sat Nov 29 20:42:44 +0000 2014"
+        "created_at": "Sat Nov 29 20:42:44 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "RT @followwes: forget the leafs, I'm joining this raptors bandwagon @Raptors @MapleLeafs #oneiswinning",
@@ -2227,7 +2367,8 @@
             ],
             "urls": []
         },
-        "created_at": "Fri Nov 28 21:48:34 +0000 2014"
+        "created_at": "Fri Nov 28 21:48:34 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@stellarclass same :D now to splurge it ALLL on black Friday/cyber Monday deals!!",
@@ -2251,7 +2392,8 @@
             ],
             "urls": []
         },
-        "created_at": "Thu Nov 27 22:45:42 +0000 2014"
+        "created_at": "Thu Nov 27 22:45:42 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Floaty-pretty snow is infinitely better than sandblast-your-face snow",
@@ -2264,7 +2406,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Thu Nov 27 13:44:44 +0000 2014"
+        "created_at": "Thu Nov 27 13:44:44 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Doesn't matter what color your skin is... If you're only wearing a light hoodie in this weather, you sir, are a true Canadian",
@@ -2277,7 +2420,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Thu Nov 27 13:26:34 +0000 2014"
+        "created_at": "Thu Nov 27 13:26:34 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "discovered that if i dont plan to have a family/kids, i can retire at 42 and spend the rest of my life playing videogames &lt;pokerface&gt;",
@@ -2290,7 +2434,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Tue Nov 25 10:32:48 +0000 2014"
+        "created_at": "Tue Nov 25 10:32:48 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "2015 tlx taillights look sooooooooooo nice..... But $34000..... *cry*",
@@ -2303,7 +2448,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Nov 24 12:55:30 +0000 2014"
+        "created_at": "Mon Nov 24 12:55:30 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@leafdust good to be back; and don't worry when you graduate and start working you'll get EVEN LESS sleep :DDDDDDD &lt;...zombie eyes&gt;",
@@ -2327,7 +2473,8 @@
             ],
             "urls": []
         },
-        "created_at": "Mon Nov 24 12:36:46 +0000 2014"
+        "created_at": "Mon Nov 24 12:36:46 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "@leafdust know that feel: tell yourself you'll sleep early this time and it never happens",
@@ -2351,7 +2498,8 @@
             ],
             "urls": []
         },
-        "created_at": "Mon Nov 24 12:27:25 +0000 2014"
+        "created_at": "Mon Nov 24 12:27:25 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "theres just not enough hours in the week",
@@ -2364,7 +2512,8 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Mon Nov 24 00:24:12 +0000 2014"
+        "created_at": "Mon Nov 24 00:24:12 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "Have you heard ‘Sia - Chandelier (Chloe Martini Remix)’ by Chloe Martini on #SoundCloud? https://t.co/au0H0a3fL6",
@@ -2395,7 +2544,8 @@
                 }
             ]
         },
-        "created_at": "Sat Nov 22 11:16:27 +0000 2014"
+        "created_at": "Sat Nov 22 11:16:27 +0000 2014",
+        "type": "twitter"
     },
     {
         "text": "save before quitting?\n&gt;yes no",
@@ -2408,19 +2558,7 @@
             "user_mentions": [],
             "urls": []
         },
-        "created_at": "Sat Nov 22 11:10:20 +0000 2014"
-    },
-    {
-        "text": "dno how i feel about the personalized video thank yous on facebook; they remind me of customizable shockwave online greeting cards from 1999",
-        "id_str": "535665554284380161",
-        "retweet_count": 0,
-        "favorite_count": 1,
-        "entities": {
-            "hashtags": [],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-        },
-        "created_at": "Fri Nov 21 05:26:34 +0000 2014"
+        "created_at": "Sat Nov 22 11:10:20 +0000 2014",
+        "type": "twitter"
     }
 ]
