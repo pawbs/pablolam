@@ -29,12 +29,13 @@ describe('FeedInstagramController', function() {
   });
   
   describe('#push()', function() {
-    it('should push tweets to db', function (done) {
+    it('should push ig to db', function (done) {
       this.timeout(10000)
     
       console.log(app)
       FeedInstagramController.dbPush()
-      //console.log(FeedTweetController.dbPull())
+      
+      console.log(FeedTweetController.dbPull())
     
     });
   });
