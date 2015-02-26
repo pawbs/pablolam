@@ -21,7 +21,7 @@ module.exports = {
     console.log("pushing tweets to db")
     sails.log.info("pushing tweets to db")
     
-    var tweets = [];
+    
     
     var T = new Twit({
       consumer_key: 'QveUKApaKWnWLgnHGlIWwRGTS', 
@@ -30,28 +30,38 @@ module.exports = {
       access_token_secret: '7aOUMqWhGPDdIP0GZkH4dXBWvUAs5HzXgf2JIFv4cAnty'
     })
     
+    function getTweetResponse(err, data, response){
     
+      var tweets = [];
     
-    function getTweet(){
-      T.get('statuses/user_timeline', { user_id: 'pawbs' , count: 100 }, function(err, data, response) {
-        fs.appendFile('twitResponse.json', JSON.stringify(data, null, 4))
+      fs.appendFile('twitResponse.json', JSON.stringify(data, null, 4))
         
-        for (i in data) {
-          tweets[i] = {}
-          tweets[i].text = data[i].text
-          tweets[i].id_str = data[i].id_str
-          tweets[i].retweet_count = data[i].retweet_count
-          tweets[i].favorite_count = data[i].favorite_count
-          tweets[i].entities = data[i].entities
-          tweets[i].created_at = data[i].created_at
-          tweets[i].type = "twitter"
-        }
-        
-        Tweet.create(tweets).exec(console.log)
-        fs.appendFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
-        
-      })
+      for (i in data) {
+        tweets[i] = {}
+        tweets[i].text = data[i].text
+        tweets[i].id_str = data[i].id_str
+        tweets[i].retweet_count = data[i].retweet_count
+        tweets[i].favorite_count = data[i].favorite_count
+        tweets[i].entities = data[i].entities
+        tweets[i].created_at = data[i].created_at
+        tweets[i].type = "twitter"
+      }
+      
+      Tweet.create(tweets).exec(function(){})
+      fs.appendFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
+      console.log('==========')
+      console.log(tweets.length)
+      console.log(tweets[tweets.length-1].id_str - 1)
+      if (tweets.length > 0) getTweet(tweets[tweets.length-1].id_str - 1)
     }
+    
+    function getTweet(id_str){
+      T.get('statuses/user_timeline', { 
+        user_id: 'pawbs' , 
+        max_id: id_str,
+        count: 200 }, 
+        getTweetResponse
+    )}
     
     getTweet()
     
