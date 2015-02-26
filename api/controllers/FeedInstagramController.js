@@ -16,8 +16,8 @@ module.exports = {
    */
   dbPush: function (req, res) {
 
-    fs.unlink('igResponse.json')
-    fs.unlink('igResponse2.json')
+    fs.writeFile('igResponse.json', '')
+    fs.writeFile('igResponse2.json', '')
   
     ig.set('client_id', '3318adad30cc4c458aa8b8b5026cc657');
     ig.set('client_secret', 'aaab2c9d4e4d4ffe8a2e53bd2320226c');
