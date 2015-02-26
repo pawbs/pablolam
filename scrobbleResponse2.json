@@ -336,8 +336,7 @@
     "url": "http://www.last.fm/music/Sara+Bareilles/_/Gravity",
     "date": "1357416697",
     "artist": "Sara Bareilles"
-  }
-][
+  },
   {
     "image": "http://userserve-ak.last.fm/serve/300x300/3738494.jpg",
     "name": "Can't Go Back",
@@ -618,54 +617,5 @@
     "url": "http://www.last.fm/music/%EC%A3%BC%EB%AC%B8+(MIROTIC)/_/Mirotic",
     "date": "1253666054",
     "artist": "주문 (MIROTIC)"
-  },
-  {
-    "image": "http://userserve-ak.last.fm/serve/300x300/98394887.png",
-    "name": "It's Time",
-    "url": "http://www.last.fm/music/Imagine+Dragons/_/It%27s+Time",
-    "date": "1362847486",
-    "artist": "Imagine Dragons"
-  },
-  {
-    "image": "http://userserve-ak.last.fm/serve/300x300/84606673.png",
-    "name": "Set Me on Fire",
-    "url": "http://www.last.fm/music/Bella+Ferraro/_/Set+Me+on+Fire",
-    "date": "1362124731",
-    "artist": "Bella Ferraro"
-  },
-  {
-    "image": "http://userserve-ak.last.fm/serve/300x300/87280287.jpg",
-    "name": "哪里都是你",
-    "url": "http://www.last.fm/music/%E5%91%A8%E6%9D%B0%E5%80%AB/_/%E5%93%AA%E9%87%8C%E9%83%BD%E6%98%AF%E4%BD%A0",
-    "date": "1361663892",
-    "artist": "周杰倫"
-  },
-  {
-    "image": "http://userserve-ak.last.fm/serve/300x300/76178152.png",
-    "name": "Worldwide",
-    "url": "http://www.last.fm/music/Big+Time+Rush/_/Worldwide",
-    "date": "1359744812",
-    "artist": "Big Time Rush"
-  },
-  {
-    "image": "http://userserve-ak.last.fm/serve/300x300/34918677.png",
-    "name": "Your Love Is a Song",
-    "url": "http://www.last.fm/music/Switchfoot/_/Your+Love+Is+a+Song",
-    "date": "1358313551",
-    "artist": "Switchfoot"
-  },
-  {
-    "image": "http://userserve-ak.last.fm/serve/300x300/73650072.png",
-    "name": "Say You Like Me",
-    "url": "http://www.last.fm/music/We+the+Kings/_/Say+You+Like+Me",
-    "date": "1357418581",
-    "artist": "We the Kings"
-  },
-  {
-    "image": "http://userserve-ak.last.fm/serve/300x300/68160300.png",
-    "name": "Gravity",
-    "url": "http://www.last.fm/music/Sara+Bareilles/_/Gravity",
-    "date": "1357416697",
-    "artist": "Sara Bareilles"
   }
 ]

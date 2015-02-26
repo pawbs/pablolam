@@ -25,9 +25,7 @@ module.exports = {
     })
     
     function getScrobbleResponse(data){
-      
-      
-      
+
       for (i in data.lovedtracks.track) {
         scrobble[i] = {}
         if (data.lovedtracks.track[i].image != null) scrobble[i].image = data.lovedtracks.track[i].image[3]['#text']
@@ -35,7 +33,6 @@ module.exports = {
         scrobble[i].url = data.lovedtracks.track[i].url
         scrobble[i].date = data.lovedtracks.track[i].date.uts
         scrobble[i].artist = data.lovedtracks.track[i].artist.name
-        
       }
       
       //console.log(data.lovedtracks.track[0].name)
@@ -43,17 +40,20 @@ module.exports = {
       
       fs.appendFile('scrobbleResponse.json', JSON.stringify(data.lovedtracks.track, null, 2))
       fs.appendFile('scrobbleResponse2.json', JSON.stringify(scrobble, null, 2))
+      Scrobble.create(scrobble).exec(function(){})
       
       //Scrobble.create().exec(console.log)
       
       var metadata = data.lovedtracks['@attr']
-      if (metadata.totalPages > metadata.page) getScrobble(metadata.page + 1)
+      console.log(metadata)
+      if (metadata.totalPages > metadata.page) getScrobble(metadata.page + 1, metadata.total - metadata.page*50)
     }
     
-    function getScrobble(page){
+    function getScrobble(page, count){
       lastfm.request('user.getLovedTracks', {
         user: 'SacriChan',
         page: page,
+        limit: 9999999,
         handlers: {
             success: getScrobbleResponse,
             error: function(error) {
@@ -63,7 +63,7 @@ module.exports = {
       })
     }
     
-    getScrobble(1)
+    getScrobble(1, 50)
     
   
   },

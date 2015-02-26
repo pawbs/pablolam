@@ -1,5 +1,41 @@
 [
     {
+        "text": "Android needs a I'm-lying-in-bed-so-rotate-90-CCW-from-regular toggle",
+        "id_str": "570113403395710978",
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "created_at": "Tue Feb 24 06:50:02 +0000 2015",
+        "type": "twitter"
+    },
+    {
+        "text": "Crazy how much things can change in 7months #vagueLateNightTweet",
+        "id_str": "570112699968966656",
+        "retweet_count": 0,
+        "favorite_count": 0,
+        "entities": {
+            "hashtags": [
+                {
+                    "text": "vagueLateNightTweet",
+                    "indices": [
+                        44,
+                        64
+                    ]
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "created_at": "Tue Feb 24 06:47:14 +0000 2015",
+        "type": "twitter"
+    },
+    {
         "text": "starting new pet project; I don't know how anyone can be prouctive on only *one* monitor.. http://t.co/7yUkWzd7li",
         "id_str": "569660433759649792",
         "retweet_count": 0,
@@ -264,8 +300,8 @@
                     "expanded_url": "http://go.ign.com/oznTQGK",
                     "display_url": "go.ign.com/oznTQGK",
                     "indices": [
-                        95,
-                        117
+                        139,
+                        140
                     ]
                 }
             ],
@@ -274,7 +310,7 @@
                     "id": 562508125992132600,
                     "id_str": "562508125992132608",
                     "indices": [
-                        118,
+                        139,
                         140
                     ],
                     "media_url": "http://pbs.twimg.com/media/B85uKQkIIAAklnA.jpg",
@@ -949,7 +985,7 @@
                     "expanded_url": "http://www.gocomics.com/sarahs-scribbles/2015/01/14#.VLaONKC9wGQ.twitter",
                     "display_url": "gocomics.com/sarahs-scribbl…",
                     "indices": [
-                        48,
+                        69,
                         70
                     ]
                 }
@@ -1178,7 +1214,7 @@
                     "expanded_url": "http://www.gocomics.com/sarahs-scribbles/2015/01/03#.VKgT5yQdtKc.twitter",
                     "display_url": "gocomics.com/sarahs-scribbl…",
                     "indices": [
-                        48,
+                        69,
                         70
                     ]
                 }
@@ -2513,52 +2549,6 @@
             "urls": []
         },
         "created_at": "Mon Nov 24 00:24:12 +0000 2014",
-        "type": "twitter"
-    },
-    {
-        "text": "Have you heard ‘Sia - Chandelier (Chloe Martini Remix)’ by Chloe Martini on #SoundCloud? https://t.co/au0H0a3fL6",
-        "id_str": "536115989977387009",
-        "retweet_count": 0,
-        "favorite_count": 0,
-        "entities": {
-            "hashtags": [
-                {
-                    "text": "SoundCloud",
-                    "indices": [
-                        76,
-                        87
-                    ]
-                }
-            ],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": [
-                {
-                    "url": "https://t.co/au0H0a3fL6",
-                    "expanded_url": "https://soundcloud.com/chloe-martini/sia-chandelier-chloe-martini?utm_source=soundcloud&utm_campaign=share&utm_medium=twitter",
-                    "display_url": "soundcloud.com/chloe-martini/…",
-                    "indices": [
-                        89,
-                        112
-                    ]
-                }
-            ]
-        },
-        "created_at": "Sat Nov 22 11:16:27 +0000 2014",
-        "type": "twitter"
-    },
-    {
-        "text": "save before quitting?\n&gt;yes no",
-        "id_str": "536114451792281601",
-        "retweet_count": 0,
-        "favorite_count": 0,
-        "entities": {
-            "hashtags": [],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-        },
-        "created_at": "Sat Nov 22 11:10:20 +0000 2014",
         "type": "twitter"
     }
 ]

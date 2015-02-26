@@ -10,12 +10,13 @@ var fs = require('fs')
  
 module.exports = {
 	
-
-
   /**
    * `FeedTweetController.dbPush()`
    */
   dbPush: function (req, res) {
+  
+    fs.writeFile('twitResponse.json', '')
+    fs.writeFile('twitResponse2.json', '')
     
     console.log("pushing tweets to db")
     sails.log.info("pushing tweets to db")
@@ -29,24 +30,30 @@ module.exports = {
       access_token_secret: '7aOUMqWhGPDdIP0GZkH4dXBWvUAs5HzXgf2JIFv4cAnty'
     })
     
-    T.get('statuses/user_timeline', { user_id: 'pawbs' , count: 100 }, function(err, data, response) {
-      fs.writeFile('twitResponse.json', JSON.stringify(data, null, 4))
-      
-      for (i in data) {
-        tweets[i] = {}
-        tweets[i].text = data[i].text
-        tweets[i].id_str = data[i].id_str
-        tweets[i].retweet_count = data[i].retweet_count
-        tweets[i].favorite_count = data[i].favorite_count
-        tweets[i].entities = data[i].entities
-        tweets[i].created_at = data[i].created_at
-        tweets[i].type = "twitter"
-      }
-      
-      Tweet.create(tweets).exec(console.log)
-      fs.writeFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
-      
-    })
+    
+    
+    function getTweet(){
+      T.get('statuses/user_timeline', { user_id: 'pawbs' , count: 100 }, function(err, data, response) {
+        fs.appendFile('twitResponse.json', JSON.stringify(data, null, 4))
+        
+        for (i in data) {
+          tweets[i] = {}
+          tweets[i].text = data[i].text
+          tweets[i].id_str = data[i].id_str
+          tweets[i].retweet_count = data[i].retweet_count
+          tweets[i].favorite_count = data[i].favorite_count
+          tweets[i].entities = data[i].entities
+          tweets[i].created_at = data[i].created_at
+          tweets[i].type = "twitter"
+        }
+        
+        Tweet.create(tweets).exec(console.log)
+        fs.appendFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
+        
+      })
+    }
+    
+    getTweet()
     
     console.log('finished dbpush')
     sails.log.info("finished dbpush")
