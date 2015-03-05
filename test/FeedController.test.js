@@ -1,6 +1,7 @@
 var assert = require('assert');
 var FeedController = require('../api/controllers/FeedController.js');
 var Sails = require('sails');
+var fs = require('fs')
 
 describe('FeedController', function() {
 
@@ -32,8 +33,13 @@ describe('FeedController', function() {
     it('should push tweets to db', function (done) {
       this.timeout(10000)
     
+      
+    
       console.log(app)
       FeedController.dbPush()
+      
+      //FeedController.dbPull()
+      
       //console.log(FeedController.dbPull())
     
     });

@@ -27,7 +27,7 @@ module.exports = {
     
     function getIG(lastID){
       ig.users.recent({ 
-        user_id: 46311663,
+        user_id: 1596590435,
         count: 33,
         max_id: lastID,
         complete: getIGResponse
@@ -44,12 +44,13 @@ module.exports = {
       for (i in data) {
         igsSet[i] = {}
         
-        if (data[i].caption != null) igsSet[i].caption = data[i].caption.text
+        if (data[i].caption != null) igsSet[i].text = data[i].caption.text
         igsSet[i].image = data[i].images.standard_resolution.url
         igsSet[i].comments = data[i].comments.count
-        igsSet[i].created_time = data[i].created_time
+        igsSet[i].pabloDate = String(data[i].created_time)
         igsSet[i].likes = data[i].likes.count
         igsSet[i].link = data[i].link
+        igsSet[i].type = "instagram"
       }
       fs.appendFile('igResponse2.json', JSON.stringify(igsSet, null, 2))
       fs.appendFile('igResponse2.json', 'NEWPAGEHERPADUR')

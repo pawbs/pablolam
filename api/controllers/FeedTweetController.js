@@ -5,6 +5,7 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 
+var moment = require('moment');
 var Twit = require('twit')
 var fs = require('fs')
  
@@ -20,8 +21,6 @@ module.exports = {
     
     console.log("pushing tweets to db")
     sails.log.info("pushing tweets to db")
-    
-    
     
     var T = new Twit({
       consumer_key: 'QveUKApaKWnWLgnHGlIWwRGTS', 
@@ -43,7 +42,8 @@ module.exports = {
         tweets[i].retweet_count = data[i].retweet_count
         tweets[i].favorite_count = data[i].favorite_count
         tweets[i].entities = data[i].entities
-        tweets[i].created_at = data[i].created_at
+        //tweets[i].created_at = data[i].created_at
+        tweets[i].pabloDate = String(moment(data[i].created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix())
         tweets[i].type = "twitter"
       }
       

@@ -35,7 +35,6 @@ describe('FeedInstagramController', function() {
       console.log(app)
       FeedInstagramController.dbPush()
       
-      console.log(FeedTweetController.dbPull())
     
     });
   });

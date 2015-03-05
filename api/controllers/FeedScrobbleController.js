@@ -17,6 +17,7 @@ module.exports = {
 
     fs.writeFile('scrobbleResponse.json', '')
     fs.writeFile('scrobbleResponse2.json', '')
+    
     var scrobble = []
   
     var lastfm = new LastFmNode({
@@ -29,10 +30,11 @@ module.exports = {
       for (i in data.lovedtracks.track) {
         scrobble[i] = {}
         if (data.lovedtracks.track[i].image != null) scrobble[i].image = data.lovedtracks.track[i].image[3]['#text']
-        scrobble[i].name = data.lovedtracks.track[i].name
+        scrobble[i].text = data.lovedtracks.track[i].name
         scrobble[i].url = data.lovedtracks.track[i].url
-        scrobble[i].date = data.lovedtracks.track[i].date.uts
+        scrobble[i].pabloDate = String(data.lovedtracks.track[i].date.uts)
         scrobble[i].artist = data.lovedtracks.track[i].artist.name
+        scrobble[i].type = "lastfm"
       }
       
       //console.log(data.lovedtracks.track[0].name)
@@ -51,7 +53,7 @@ module.exports = {
     
     function getScrobble(page, count){
       lastfm.request('user.getLovedTracks', {
-        user: 'SacriChan',
+        user: 'pb_overflow',
         page: page,
         limit: 9999999,
         handlers: {
