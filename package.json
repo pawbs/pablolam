@@ -40,5 +40,6 @@
     "url": "git://github.com/anonymous node/sails user/pablolam-backend.git"
   },
   "author": "anonymous node/sails user",
-  "license": ""
+  "license": "",
+  "devDependencies": {}
 }

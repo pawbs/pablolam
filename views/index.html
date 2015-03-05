@@ -1,20 +1,27 @@
 <!doctype html>
-<html ng-app>
+<html>
   <head>
     <title>Pablo Lam Landing Page</title>
     
-    <script src="js/dependencies/angular/angular.min.js"></script>
-    <script src="js/dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/dependencies/jquery/dist/jquery.min.js"></script>
+    <script src="js/dependencies/angular/angular.min.js"></script>
+    <script src="js/dependencies/angular-resource/angular-resource.min.js"></script> 
+    <script src="js/dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/dependencies/angular-bootstrap/ui-bootstrap.min.js"></script>  
     <script src="js/dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    <script src="js/dependencies/ng-infinite-scroll.min.js"></script>    
+    <script src="js/dependencies/ng-infinite-scroll.min.js"></script> 
+        
+    
+    
+    <script src="js/pablolam.js"></script>
     
     <link rel="stylesheet" href="js/dependencies/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/importer.css">
     
+    
+    
   </head>
-  <body>
+  <body ng-app="pablolam">
 
 
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -31,10 +38,13 @@
     </nav>
 
   
-  <div class="pabloFeed">
-    <div class="pabloFeedBlock">
-      test
-    </div>
+  <div class="pabloFeed" ng-controller="FeedController">
+    <div infinite-scroll='loadMore()' infinite-scroll-distance='0'>
+      <div ng-repeat='block in pabloFeed track by $index' class="pabloFeedBlock">
+        {{block.pabloDate}}
+        {{block.type}}
+      </div>
+    </div
   </div>
   
   </body>
