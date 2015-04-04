@@ -10,7 +10,8 @@
     <script src="js/dependencies/angular-bootstrap/ui-bootstrap.min.js"></script>  
     <script src="js/dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="js/dependencies/ng-infinite-scroll.min.js"></script> 
-        
+    <script src="js/dependencies/angular-animate/angular-animate.min.js"></script> 
+    <script src="js/dependencies/angular-scroll/angular-scroll.min.js"></script> 
     
     
     <script src="js/pablolam.js"></script>
@@ -23,7 +24,26 @@
   </head>
   <body ng-app="pablolam">
 
-
+    <script type="text/ng-template" id="twitter">
+      <div ng-show='showTwit'>
+        {{block.pabloDate}}
+        {{block.type}}
+        <p>This is the content of the template twitter</p>
+      </div>
+    </script>
+    
+    <script type="text/ng-template" id="lastfm">
+      {{block.pabloDate}}
+      {{block.type}}
+      <p>This is the content of the template lastfm</p>
+    </script>
+    
+    <script type="text/ng-template" id="instagram">
+      {{block.pabloDate}}
+      {{block.type}}
+      <p>This is the content of the template instagram</p>
+    </script>
+    
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="navbar-container">
         <ul class="nav navbar-nav navbar-left">
@@ -37,14 +57,41 @@
       </div>
     </nav>
 
-  
-  <div class="pabloFeed" ng-controller="FeedController">
-    <div infinite-scroll='loadMore()' infinite-scroll-distance='0'>
-      <div ng-repeat='block in pabloFeed track by $index' class="pabloFeedBlock">
-        {{block.pabloDate}}
-        {{block.type}}
+  <div class="mainContainer" ng-controller="FeedController">
+    
+    <div class="pabloFeed">
+      <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
+        <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
+          <div ng-include="block.type"></div>
+        </div>
       </div>
-    </div
+    </div>
+  
+  <div class="loadMoreButton">
+    <button ng-click="loadMore()">
+      Moar!!
+    </button>
+  </div>
+  
+  <div class="footer">
+    footer
+  </div>
+
+  
+  <div class="stickyFooter">
+    <button ng-click="goToTop()">
+      to top
+    </button>
+    <button ng-click="toggleTwit()">
+      Twitter
+    </button>
+    <button ng-click="toggleInstagram()">
+      Instagram
+    </button>
+    <button ng-click="toggleScrobble()">
+      Last fm
+    </button>
+    
   </div>
   
   </body>
