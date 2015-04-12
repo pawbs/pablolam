@@ -11,8 +11,9 @@
     <script src="js/dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script src="js/dependencies/ng-infinite-scroll.min.js"></script> 
     <script src="js/dependencies/angular-animate/angular-animate.min.js"></script> 
-    <script src="js/dependencies/angular-scroll/angular-scroll.min.js"></script> 
-    
+    <script src="js/dependencies/angular-scroll/angular-scroll.min.js"></script>  
+    <script src="js/dependencies/skrollr.min.js"></script>
+    <script src="js/dependencies/skrollr.dir.js"></script>
     
     <script src="js/pablolam.js"></script>
     
@@ -50,7 +51,7 @@
       
       <div class="mainContainer" ng-controller="FeedController">
         
-        <nav class="navbar navbar-inverse navbar-fixed-top animate-repeat" ng-if="navbarShow">
+        <nav class="navbar navbar-inverse navbar-fixed-top" skrollr data-0="opacity:1;" data-400="opacity:0; pointer-events: visiblePainted;" data-401="pointer-events: none;">
           <div class="navbar-container">
             <ul class="nav navbar-nav navbar-left">
               <li><a href="https://www.facebook.com/pawbs">Facebook</a></li>
@@ -95,10 +96,6 @@
         <button ng-click="toggleScrobble()">
           Last fm
         </button>
-        <button ng-click="toggleNavbar()">
-          Navbar
-        </button>
-        
       </div>
     
     </div>

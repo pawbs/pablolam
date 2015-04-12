@@ -20,6 +20,7 @@
   "author": "anonymous node/sails user",
   "private": true,
   "devDependencies": {
-    "skrollr": "~0.6.29"
+    "skrollr": "~0.6.29",
+    "angular-skrollr-directive": "~1.0.0"
   }
 }

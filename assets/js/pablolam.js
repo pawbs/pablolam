@@ -1,4 +1,4 @@
-angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScroll'])
+angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScroll', 'directives.skrollr'])
 
 .controller('FeedController', ['$scope', '$resource', '$timeout', '$templateCache', '$document',
   function($scope, $resource, $timeout, $templateCache, $document) {
@@ -70,9 +70,6 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   }
   $scope.toggleScrobble = function(){
     $scope.showScrobble = !$scope.showScrobble
-  }
-  $scope.toggleNavbar = function(){
-    $scope.navbarShow = !$scope.navbarShow
   }
   
   //SCROLL FUNCTIONS
