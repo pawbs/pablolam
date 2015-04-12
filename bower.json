@@ -18,5 +18,8 @@
   "name": "pablolam-backend",
   "version": "0.0.0",
   "author": "anonymous node/sails user",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "skrollr": "~0.6.29"
+  }
 }
