@@ -22,77 +22,85 @@
     
     
   </head>
-  <body ng-app="pablolam">
+    <body ng-app="pablolam">
 
-    <script type="text/ng-template" id="twitter">
-      <div ng-show='showTwit'>
-        {{block.pabloDate}}
-        {{block.type}}
-        <p>This is the content of the template twitter</p>
-      </div>
-    </script>
-    
-    <script type="text/ng-template" id="lastfm">
-      {{block.pabloDate}}
-      {{block.type}}
-      <p>This is the content of the template lastfm</p>
-    </script>
-    
-    <script type="text/ng-template" id="instagram">
-      {{block.pabloDate}}
-      {{block.type}}
-      <p>This is the content of the template instagram</p>
-    </script>
-    
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="navbar-container">
-        <ul class="nav navbar-nav navbar-left">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-      </div>
-    </nav>
-
-  <div class="mainContainer" ng-controller="FeedController">
-    
-    <div class="pabloFeed">
-      <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
-        <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
-          <div ng-include="block.type"></div>
+      <script type="text/ng-template" id="twitter">
+        <div class="pabloTwitFeedBlock">
+          {{block.pabloDate}}
+          {{block.type}}
+          <p>This is the content of the template twitter</p>
         </div>
+      </script>
+      
+      <script type="text/ng-template" id="lastfm">
+        <div class="pabloLastFMFeedBlock">
+          {{block.pabloDate}}
+          {{block.type}}
+          <p>This is the content of the template lastfm</p>
+        </div>
+      </script>
+      
+      <script type="text/ng-template" id="instagram">
+        <div class="pabloIGFeedBlock">
+          {{block.pabloDate}}
+          {{block.type}}
+          <p>This is the content of the template instagram</p>
+        </div>
+      </script>
+      
+      <div class="mainContainer" ng-controller="FeedController">
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top animate-repeat" ng-if="navbarShow">
+          <div class="navbar-container">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="https://www.facebook.com/pawbs">Facebook</a></li>
+              <li><a href="https://twitter.com/pawBs">Twitter</a></li>
+              <li><a href="www.last.fm/user/pb_overflow">Last FM</a></li>
+              
+            </ul>
+          </div>
+        </nav>
+        <div class="pabloHeader">
+        </div>
+        
+        <div class="pabloFeed">
+          <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
+            <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
+              <div ng-include="block.type"></div>
+            </div>
+          </div>
+        </div>
+      
+      <div class="loadMoreButton">
+        <button ng-click="loadMore()">
+          Moar!!
+        </button>
       </div>
-    </div>
-  
-  <div class="loadMoreButton">
-    <button ng-click="loadMore()">
-      Moar!!
-    </button>
-  </div>
-  
-  <div class="footer">
-    footer
-  </div>
+      
+      <div class="footer">
+        footer
+      </div>
 
-  
-  <div class="stickyFooter">
-    <button ng-click="goToTop()">
-      to top
-    </button>
-    <button ng-click="toggleTwit()">
-      Twitter
-    </button>
-    <button ng-click="toggleInstagram()">
-      Instagram
-    </button>
-    <button ng-click="toggleScrobble()">
-      Last fm
-    </button>
+      
+      <div class="stickyFooter">
+        <button ng-click="goToTop()">
+          to top
+        </button>
+        <button ng-click="toggleTwit()">
+          Twitter
+        </button>
+        <button ng-click="toggleInstagram()">
+          Instagram
+        </button>
+        <button ng-click="toggleScrobble()">
+          Last fm
+        </button>
+        <button ng-click="toggleNavbar()">
+          Navbar
+        </button>
+        
+      </div>
     
-  </div>
-  
+    </div>
   </body>
 </html>

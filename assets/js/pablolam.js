@@ -5,6 +5,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
 
   $scope.infiniteDisabled = true;
   $scope.infiniteBusy = false;
+  $scope.navbarShow = true;
 
   $scope.showTwit = true;
   $scope.showInstagram = true;
@@ -69,6 +70,9 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   }
   $scope.toggleScrobble = function(){
     $scope.showScrobble = !$scope.showScrobble
+  }
+  $scope.toggleNavbar = function(){
+    $scope.navbarShow = !$scope.navbarShow
   }
   
   //SCROLL FUNCTIONS

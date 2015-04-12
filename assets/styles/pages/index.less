@@ -3,7 +3,18 @@ body {
 }
 
 .mainContainer {
-  margin-top: 300px;
+}
+
+.pabloHeader {
+
+  background-image: url(../../images/pabloHeader.png);
+  width: 100%;
+  margin-top: 51px;
+  height: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: fixed;
+
 }
 
 .pabloFeed {
@@ -17,6 +28,23 @@ body {
   
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+  color: #ffffff;
+  
+}
+
+.pabloTwitFeedBlock {
+  background-color: #00CCFF;
+}
+
+.pabloIGFeedBlock {
+  background-color: #A37547;
+}
+
+.pabloLastFMFeedBlock {
+  background-color: #CC0000;
 }
 
 .loadMoreButton {
@@ -36,16 +64,7 @@ body {
   left: 200px;
 }
 
-.twitter {
-}
-
-.lastfm {
-
-}
-
-.instagram {
-}
-
+//CSS Animations
 .animate-repeat {
   line-height:40px;
   list-style:none;
@@ -71,4 +90,21 @@ body {
 .animate-repeat.ng-enter.ng-enter-active {
   opacity:1;
   max-height:80px;
+}
+
+//Navbar prevent collapse
+.navbar-collapse.collapse {
+  display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+  float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-right: -15px !important;
+}
+
+.navbar-right {
+  float: right!important;
 }
