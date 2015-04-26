@@ -7,6 +7,7 @@
 
 var LastFmNode = require('lastfm').LastFmNode
 var fs = require('fs') 
+var apikeys = require('../../config/apikeys.js');
  
 module.exports = {
 
@@ -21,8 +22,8 @@ module.exports = {
     var scrobble = []
   
     var lastfm = new LastFmNode({
-      api_key: '37bd3c66b7a3351d11ad5fd2b182e181',    // sign-up for a key at http://www.last.fm/api
-      secret: '1c659006769e3cecfbc111e367b9eee5'
+      api_key: apikeys.lastfm_api_key,    // sign-up for a key at http://www.last.fm/api
+      secret: apikeys.lastfm_secret
     })
     
     function getScrobbleResponse(data){
@@ -40,8 +41,8 @@ module.exports = {
       //console.log(data.lovedtracks.track[0].name)
       //console.log(scrobble)
       
-      fs.appendFile('scrobbleResponse.json', JSON.stringify(data.lovedtracks.track, null, 2))
-      fs.appendFile('scrobbleResponse2.json', JSON.stringify(scrobble, null, 2))
+      //fs.appendFile('scrobbleResponse.json', JSON.stringify(data.lovedtracks.track, null, 2))
+      //fs.appendFile('scrobbleResponse2.json', JSON.stringify(scrobble, null, 2))
       Scrobble.create(scrobble).exec(function(){})
       
       //Scrobble.create().exec(console.log)

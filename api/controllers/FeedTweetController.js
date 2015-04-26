@@ -8,6 +8,7 @@
 var moment = require('moment');
 var Twit = require('twit')
 var fs = require('fs')
+var apikeys = require('../../config/apikeys.js');
  
 module.exports = {
 	
@@ -23,17 +24,17 @@ module.exports = {
     sails.log.info("pushing tweets to db")
     
     var T = new Twit({
-      consumer_key: 'QveUKApaKWnWLgnHGlIWwRGTS', 
-      consumer_secret: '2aOH229565R6YGJxIueG4DE0X7vh69YYNoJfFHomFMvZGm3vPp', 
-      access_token: '75707133-6RUQM3fA2By7HqQSJj8rIqInF7HQ6QyBVil4Flj7A', 
-      access_token_secret: '7aOUMqWhGPDdIP0GZkH4dXBWvUAs5HzXgf2JIFv4cAnty'
+      consumer_key: apikeys.twitter_consumer_key,
+      consumer_secret: apikeys.twitter_consumer_secret,
+      access_token: apikeys.twitter_access_token,
+      access_token_secret: apikeys.twitter_access_token_secret
     })
     
     function getTweetResponse(err, data, response){
     
       var tweets = [];
     
-      fs.appendFile('twitResponse.json', JSON.stringify(data, null, 4))
+      //fs.appendFile('twitResponse.json', JSON.stringify(data, null, 4))
         
       for (i in data) {
         tweets[i] = {}
@@ -48,7 +49,7 @@ module.exports = {
       }
       
       Tweet.create(tweets).exec(function(){})
-      fs.appendFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
+      //fs.appendFile('twitResponse2.json', JSON.stringify(tweets, null, 4))
       console.log('==========')
       console.log(tweets.length)
       console.log(tweets[tweets.length-1].id_str - 1)

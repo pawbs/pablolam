@@ -48,9 +48,6 @@ module.exports = {
       res.status(201)
     }
     
-    //res.status(201);
-    //res.json()
-    //res.send("hnerp");
   }
   
 };

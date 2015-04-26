@@ -7,6 +7,7 @@
 
 var ig = require('instagram-node-lib');
 var fs = require('fs') 
+var apikeys = require('../../config/apikeys.js');
  
 module.exports = {
 	
@@ -19,8 +20,8 @@ module.exports = {
     fs.writeFile('igResponse.json', '')
     fs.writeFile('igResponse2.json', '')
   
-    ig.set('client_id', '3318adad30cc4c458aa8b8b5026cc657');
-    ig.set('client_secret', 'aaab2c9d4e4d4ffe8a2e53bd2320226c');
+    ig.set('client_id', apikeys.instagram_client_id);
+    ig.set('client_secret', apikeys.instagram_client_secret);
 
     var igsSet = []
     var igs = []
@@ -52,9 +53,9 @@ module.exports = {
         igsSet[i].link = data[i].link
         igsSet[i].type = "instagram"
       }
-      fs.appendFile('igResponse2.json', JSON.stringify(igsSet, null, 2))
-      fs.appendFile('igResponse2.json', 'NEWPAGEHERPADUR')
-      Instagram.create(igsSet).exec(console.log)
+      //fs.appendFile('igResponse2.json', JSON.stringify(igsSet, null, 2))
+      //fs.appendFile('igResponse2.json', 'NEWPAGEHERPADUR')
+      Instagram.create(igsSet).exec(function(){})
       
       if (data.length == 33) getIG(pagination.next_max_id)
       
