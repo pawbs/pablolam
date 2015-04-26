@@ -44,8 +44,16 @@ module.exports = {
     Feed.find().sort({pabloDate : -1}).exec(findResponse)
     
     function findResponse(err,data){
-      res.json(data)
-      res.status(201)
+      if (data.length > 0){
+        res.json(data)
+        res.status(201)
+      }
+      else {
+        console.log("waiting for feedController to finish")
+        setTimeout(function(){
+          Feed.find().sort({pabloDate : -1}).exec(findResponse)
+        }, 1000);
+      }
     }
     
   }

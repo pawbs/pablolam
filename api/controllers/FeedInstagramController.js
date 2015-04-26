@@ -46,6 +46,7 @@ module.exports = {
         igsSet[i] = {}
         
         if (data[i].caption != null) igsSet[i].text = data[i].caption.text
+        igsSet[i].id_str = data[i].id
         igsSet[i].image = data[i].images.standard_resolution.url
         igsSet[i].comments = data[i].comments.count
         igsSet[i].pabloDate = String(data[i].created_time)

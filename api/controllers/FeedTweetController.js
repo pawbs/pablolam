@@ -43,7 +43,6 @@ module.exports = {
         tweets[i].retweet_count = data[i].retweet_count
         tweets[i].favorite_count = data[i].favorite_count
         tweets[i].entities = data[i].entities
-        //tweets[i].created_at = data[i].created_at
         tweets[i].pabloDate = String(moment(data[i].created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').unix())
         tweets[i].type = "twitter"
       }

@@ -10,4 +10,5 @@ module.exports.crontab = {
   '* * * * *': function(){
       require('../crontab/update.js').run();
   }
+  
 };
