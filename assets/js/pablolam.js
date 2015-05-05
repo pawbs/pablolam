@@ -41,6 +41,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
+          
         },1000).then( function() {})
       }
     }

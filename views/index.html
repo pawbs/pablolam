@@ -27,25 +27,40 @@
 
       <script type="text/ng-template" id="twitter">
         <div class="pabloTwitFeedBlock">
-          {{block.pabloDate}}
-          {{block.type}}
-          <p>This is the content of the template twitter</p>
+          <div>
+            {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+          </div>
+          <div class="pabloTwitFeedBlockText">
+            {{block.text}}
+          </div>
+          <div ng-show="block.entities.media != null">
+            {{block.entities.media[0].media_url}}
+          </div>
+          <div>
+            star: {{block.favorite_count}}
+            retweet_count: {{block.retweet_count}}
+          </div>
         </div>
       </script>
       
       <script type="text/ng-template" id="lastfm">
         <div class="pabloLastFMFeedBlock">
-          {{block.pabloDate}}
-          {{block.type}}
-          <p>This is the content of the template lastfm</p>
+          <div>
+            {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+          </div>
+          <div>
+            {{block.artist}} - {{block.text}}
+          </div>
         </div>
       </script>
       
       <script type="text/ng-template" id="instagram">
         <div class="pabloIGFeedBlock">
-          {{block.pabloDate}}
-          {{block.type}}
-          <p>This is the content of the template instagram</p>
+          {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+          <span ng-style="{'background-image':'url({{block.image}})', 'background-size':'cover', 'height':'100%', 'display':'block', 'padding-bottom':'100%'}">
+          </span>
+        </div>
+        <div>
         </div>
       </script>
       

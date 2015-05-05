@@ -1,5 +1,11 @@
+html {
+  height: 100%;
+}
+
 body {
   font-size: 9.5pt;
+  line-height:100%;
+  height: 100%;
 }
 
 .mainContainer {
@@ -7,10 +13,10 @@ body {
 
 .pabloHeader {
 
-  background-image: url(../../images/pabloHeader.png);
+  background-image: url(../../images/header.png);
   width: 100%;
   margin-top: 51px;
-  height: 500px;
+  height: 435px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: fixed;
@@ -22,8 +28,8 @@ body {
 }
 
 .pabloFeedBlock {
-  width: 350px;
-  height: 80px;
+  width: 506px;
+  //height: 80px;
   //border: 1px solid #bbbbbb;
   
   margin-left: auto;
@@ -33,19 +39,44 @@ body {
   
   color: #ffffff;
   
+  font-size: 14pt;
+  line-height: 100%;
+  
+  
 }
 
 //Feed blocks
 .pabloTwitFeedBlock {
-  background-color: #00CCFF;
+  //background-color: #00CCFF;
+  //padding-top: 30px;
+  //padding-bottom: 30px;
+  //padding-left: 30px;
+  //padding-right: 30px;
+  
+  color: #00CCFF;
+}
+
+.pabloTwitFeedBlockText {
+  color: #000000;
 }
 
 .pabloIGFeedBlock {
   background-color: #A37547;
+  height: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .pabloLastFMFeedBlock {
-  background-color: #CC0000;
+  //background-color: #000000;
+  background-image: url(../../images/lastfmback.png);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  
 }
 
 //stickyFooterToolbarCircles
@@ -109,7 +140,6 @@ body {
 
 //CSS Animations
 .animate-repeat {
-  line-height:40px;
   list-style:none;
   box-sizing:border-box;
 }
