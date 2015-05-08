@@ -26,6 +26,8 @@ module.exports = {
     var igsSet = []
     var igs = []
     
+    var overrideFiles = []
+    
     function getIG(lastID){
       ig.users.recent({ 
         user_id: 1596590435,
@@ -37,8 +39,8 @@ module.exports = {
     
     function getIGResponse(data, pagination){
       
-      fs.appendFile('igResponse.json', JSON.stringify(data, null, 2))
-      fs.appendFile('igResponse.json', 'NEWPAGEHERPADUR')
+      //fs.appendFile('igResponse.json', JSON.stringify(data, null, 2))
+      //fs.appendFile('igResponse.json', 'NEWPAGEHERPADUR')
       
       igsSet = []
       
@@ -47,7 +49,14 @@ module.exports = {
         
         if (data[i].caption != null) igsSet[i].text = data[i].caption.text
         igsSet[i].id_str = data[i].id
+        
         igsSet[i].image = data[i].images.standard_resolution.url
+        for (var j = 0; j < overrideFiles.length; j++){
+          if (data[i].id == overrideFiles[j].substr(0, overrideFiles[j].length - 4)) { 
+            igsSet[i].image = "images/instaOverride/" + overrideFiles[j]
+          }
+        }
+        
         igsSet[i].comments = data[i].comments.count
         igsSet[i].pabloDate = String(data[i].created_time)
         igsSet[i].likes = data[i].likes.count
@@ -62,6 +71,8 @@ module.exports = {
       
     }
     
+    overrideFiles = []
+    overrideFiles = fs.readdirSync("assets/images/instaOverride")
     getIG()
   },
 
@@ -72,7 +83,7 @@ module.exports = {
   dbPull: function (req, res) {
 
     sails.log.info("pulling instagram from db");
-    return(Instagram.find().exec(console.log))
+    return(Instagram.find().exec(function(){}))
   
   }
 };

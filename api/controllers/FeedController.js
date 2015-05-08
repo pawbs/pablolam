@@ -18,7 +18,16 @@ module.exports = {
     
     function getFeedResponse(err, data) {
       Feed.create(data).exec(function(){})
-      fs.appendFile('feedResponse.json', JSON.stringify(data, null, 4))
+      //fs.appendFile('feedResponse.json', JSON.stringify(data, null, 4))
+    }
+    
+    function initExtra() {
+      music = {pabloDate: "2000000001", type: "music"}
+      Feed.create(music).exec(function(){})
+      
+      about = {pabloDate: "2000000000", type: "about"}
+      Feed.create(about).exec(function(){})
+      
     }
     
     function getFeed() {
@@ -29,6 +38,7 @@ module.exports = {
     }
     
     getFeed()
+    initExtra()
     
   },
   

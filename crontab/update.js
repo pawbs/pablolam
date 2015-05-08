@@ -24,6 +24,8 @@ module.exports = {
     ig.set('client_id', apikeys.instagram_client_id);
     ig.set('client_secret', apikeys.instagram_client_secret);
     
+    var overrideFiles = []
+    
     
     //define responses
     function getTweetResponse(err, data, response){
@@ -80,7 +82,14 @@ module.exports = {
         
         if (data[i].caption != null) igsSet[i].text = data[i].caption.text
         igsSet[i].id_str = data[i].id
+        
         igsSet[i].image = data[i].images.standard_resolution.url
+        for (var j = 0; j < overrideFiles.length; j++){
+          if (data[i].id == overrideFiles[j].substr(0, overrideFiles[j].length - 4)) { 
+            igsSet[i].image = "images/instaOverride/" + overrideFiles[j]
+          }
+        }
+       
         igsSet[i].comments = data[i].comments.count
         igsSet[i].pabloDate = String(data[i].created_time)
         igsSet[i].likes = data[i].likes.count
@@ -136,6 +145,9 @@ module.exports = {
     console.log('updating data');
     getTweet()
     getScrobble()
+    
+    overrideFiles = []
+    overrideFiles = fs.readdirSync("assets/images/instaOverride")
     getIG()
     
   }

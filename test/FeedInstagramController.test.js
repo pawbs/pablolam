@@ -32,7 +32,7 @@ describe('FeedInstagramController', function() {
     it('should push ig to db', function (done) {
       this.timeout(10000)
     
-      console.log(app)
+      //console.log(app)
       FeedInstagramController.dbPush()
       
     
