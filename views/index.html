@@ -14,6 +14,7 @@
     <script src="js/dependencies/angular-scroll/angular-scroll.min.js"></script>  
     <script src="js/dependencies/skrollr.min.js"></script>
     <script src="js/dependencies/skrollr.dir.js"></script>
+    <script src="js/dependencies/angular-media-player/dist/angular-media-player.min.js"></script>
     
     <script src="js/pablolam.js"></script>
     
@@ -24,21 +25,19 @@
     
   </head>
     <body ng-app="pablolam">
-
+    
       <script type="text/ng-template" id="twitter">
         <div class="pabloTwitFeedBlock">
-          <div>
-            {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
-          </div>
-          <div class="pabloTwitFeedBlockText">
-            {{block.text}}
-          </div>
-          <div ng-show="block.entities.media != null">
-            {{block.entities.media[0].media_url}}
-          </div>
-          <div>
-            star: {{block.favorite_count}}
-            retweet_count: {{block.retweet_count}}
+          <div ng-style="{{getStyleFromIndex(pabloFeed.indexOf(block), block.favorite_count)}}">
+            <div>
+              {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+            </div>
+            <div class="pabloTwitFeedBlockText">
+              {{block.text}}
+            </div>
+            <div ng-show="block.entities.media != null">
+              {{block.entities.media[0].media_url}}
+            </div>
           </div>
         </div>
       </script>
@@ -79,10 +78,20 @@
         <div class="pabloHeader">
         </div>
         
+        <div class="musicPlayer">
+          <audio media-player="audio1" data-playlist="playlist"></audio>
+          <span ng-show="audio1.playing">Player status: Playing</span>
+          <span ng-show="!audio1.playing">Player status: Paused</span>
+          <div class="playButton" ng-click="audio1.playPause()">play</div>
+          <div class="playButton" ng-click="playAll()">add all</div>
+          
+        </div>
+        
         <div class="pabloFeed">
           <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
             <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
-              <div ng-include="block.type"></div>
+              <div ng-include="block.type">
+              </div>
             </div>
           </div>
         </div>
@@ -100,7 +109,7 @@
       
       <div class="stickyFooterCenter">
         <div class="stickyFooterTop" ng-click="goToTop()"></div>
-        <div class="stickyFooterTwit" ng-click="toggleTwit()"></div>
+        <div class="stickyFooterTwit" ng-click="toggleTwitInsta()"></div>
         <div class="stickyFooterInstagram" ng-click="toggleInstagram()"></div>
         <div class="stickyFooterScrobble" ng-click="toggleScrobble()"></div>
       </div>

@@ -1,15 +1,20 @@
-angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScroll', 'directives.skrollr'])
+angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScroll', 'directives.skrollr', 'mediaPlayer'])
 
 .controller('FeedController', ['$scope', '$resource', '$timeout', '$templateCache', '$document',
   function($scope, $resource, $timeout, $templateCache, $document) {
 
-  $scope.infiniteDisabled = true;
-  $scope.infiniteBusy = false;
-  $scope.navbarShow = true;
+  $scope.infiniteDisabled = true
+  $scope.infiniteBusy = false
+  $scope.navbarShow = true
 
-  $scope.showTwit = true;
-  $scope.showInstagram = true;
-  $scope.showScrobble = true;
+  $scope.showTwit = true
+  $scope.showInstagram = true
+  $scope.showScrobble = true
+  
+  $scope.playlist = []
+  $scope.music = []
+  
+  $scope.currentSong = ""
   
   var Json = $resource('/feed/dbPull');
   
@@ -45,6 +50,10 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
         },1000).then( function() {})
       }
     }
+    
+    $scope.music = json.filter(function (el) {
+      return el.type == "lastfm"
+    });
   
   })
   
@@ -65,9 +74,10 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.toggleTwit = function(){
     $scope.showTwit = !$scope.showTwit
+    $scope.showInstagram = !$scope.showInstagram
   }
   $scope.toggleInstagram = function(){
-    $scope.showInstagram = !$scope.showInstagram
+
   }
   $scope.toggleScrobble = function(){
     $scope.showScrobble = !$scope.showScrobble
@@ -81,5 +91,41 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   $scope.goToTop = function() {
     $document.scrollTopAnimated(0, 500, easeInQuad).then(function() {});
   }
+  
+  //QUERY COLOR FUNCTIONS
+  $scope.getStyleFromIndex = function(index, stars) {
+  
+    switch(index % 4){
+      case 0:
+        color = "#00CCFF"
+        break
+      case 1:
+        color = "#00FF00"
+        break
+      case 2:
+        color = "#FFFF00"
+        break
+      case 3:
+        color = "#ffC000"
+        break
+    }
+    
+    if (stars > 0) {return "{'background-color': '" + color +  "'}"}
+    else {return "{'color': '" + color +  "'}"}
+  }
+  
+  //MUSIC FUNCTIONS
+  $scope.playAll = function() {
+    for (var i = 0; i < $scope.music.length; i++) {
+      //console.log(i)
+      //console.log($scope.music[i].text)
+      $scope.playlist[i] = {}
+      $scope.playlist[i].src = "../mp3/" + $scope.music[i].text + ".mp3"
+      $scope.playlist[i].type = "audio/mp3"
+    }
+    
+    console.log($scope.playlist)
+  }
+  
   
 }]);
