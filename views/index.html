@@ -26,6 +26,24 @@
   </head>
     <body ng-app="pablolam">
     
+      <script type="text/ng-template" id="about">
+        <div class="pabloAboutFeedBlock">
+          This is about me
+        </div>
+      </script>
+    
+      <script type="text/ng-template" id="music">
+        <div class="pabloMusicFeedBlock">
+          {{playlist}}
+          {{audio1.currentTrack}}
+          {{audio1.formatTime}}
+          {{audio1.formatDuration}}
+          {{audio1.volume}}
+          {{audio1.loadPercent}}
+          
+        </div>
+      </script>
+    
       <script type="text/ng-template" id="twitter">
         <div class="pabloTwitFeedBlock">
           <div ng-style="{{getStyleFromIndex(pabloFeed.indexOf(block), block.favorite_count)}}">
@@ -50,6 +68,9 @@
           <div>
             {{block.artist}} - {{block.text}}
           </div>
+          <div>
+            <div class="playButton" ng-click="audio1.playPause(playCurrent(block.text))">Play This</div>
+          </div>
         </div>
       </script>
       
@@ -63,19 +84,35 @@
         </div>
       </script>
       
+      <script type="text/ng-template" id="navContainer">
+        <div class="navbar-container">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="https://www.facebook.com/pawbs">Facebook</a></li>
+            <li><a href="https://twitter.com/pawBs">Twitter</a></li>
+            <li><a href="www.last.fm/user/pb_overflow">Last FM</a></li>
+          </ul>
+        </div>
+      </script>
+      
       <div class="mainContainer" ng-controller="FeedController">
         
-        <nav class="navbar navbar-inverse navbar-fixed-top" skrollr data-0="opacity:1;" data-400="opacity:0; pointer-events: visiblePainted;" data-401="pointer-events: none;">
-          <div class="navbar-container">
-            <ul class="nav navbar-nav navbar-left">
-              <li><a href="https://www.facebook.com/pawbs">Facebook</a></li>
-              <li><a href="https://twitter.com/pawBs">Twitter</a></li>
-              <li><a href="www.last.fm/user/pb_overflow">Last FM</a></li>
-              
-            </ul>
-          </div>
-        </nav>
+        <div class=navbar-container>
+        
+          <nav class="navbar transparent navbar-fixed-top">
+            <div ng-include="'navContainer'"></div>
+          </nav>
+        
+          <nav class="navbar navbar-inverse navbar-fixed-top" skrollr data-0="opacity:0;" data-400="opacity:1; pointer-events: none;" data-401="pointer-events: visiblePainted;">
+            <div ng-include="'navContainer'"></div>
+          </nav>
+          
+        </div>
+        
         <div class="pabloHeader">
+        </div>
+        
+        <div class="progressBarBack" ng-click="audio1.seek(audio1.duration * seekPercentage($event)); progressBarSeekMouseUp(seekPercentage($event))">
+          <div class="progressBar" ng-style="{ width: audio1.currentTime*100/audio1.duration + '%' }"></div>
         </div>
         
         <div class="musicPlayer">
@@ -83,7 +120,8 @@
           <span ng-show="audio1.playing">Player status: Playing</span>
           <span ng-show="!audio1.playing">Player status: Paused</span>
           <div class="playButton" ng-click="audio1.playPause()">play</div>
-          <div class="playButton" ng-click="playAll()">add all</div>
+          <div class="playButton" ng-click="audio1.next()">next</div>
+          <div class="playButton" ng-click="audio1.prev()">prev</div>
           
         </div>
         
@@ -109,8 +147,9 @@
       
       <div class="stickyFooterCenter">
         <div class="stickyFooterTop" ng-click="goToTop()"></div>
-        <div class="stickyFooterTwit" ng-click="toggleTwitInsta()"></div>
-        <div class="stickyFooterInstagram" ng-click="toggleInstagram()"></div>
+        <div class="stickyFooterTwit" ng-click="toggleAbout()"></div>
+        <div class="stickyFooterTwit" ng-click="toggleSocial()"></div>
+        <div class="stickyFooterTwit" ng-click="togglePlaylist()"></div>
         <div class="stickyFooterScrobble" ng-click="toggleScrobble()"></div>
       </div>
     

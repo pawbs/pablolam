@@ -10,6 +10,8 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   $scope.showTwit = true
   $scope.showInstagram = true
   $scope.showScrobble = true
+  $scope.showPlaylist = false
+  $scope.showAbout = false
   
   $scope.playlist = []
   $scope.music = []
@@ -35,11 +37,11 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
       if ($scope.infiniteBusy == false){
       
       $scope.infiniteBusy = true;
-      console.log("stop!")
+      //console.log("stop!")
       
         $timeout(function(){
           $scope.infiniteBusy = false;
-          console.log("go!")
+          //console.log("go!")
           $scope.infiniteDisabled = false;
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
@@ -55,11 +57,19 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
       return el.type == "lastfm"
     });
   
+    $scope.playAll()
+  
   })
   
   //FILTER FUNCTIONS
   $scope.filterByType = function(block){
     switch (block.type) {
+      case "music":
+        if ($scope.showPlaylist) {return block}
+        break
+      case "about":
+        if ($scope.showAbout) {return block}
+        break
       case "twitter":
         if ($scope.showTwit) {return block}
         break
@@ -72,13 +82,19 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     }
   }
   
-  $scope.toggleTwit = function(){
+  $scope.toggleAbout = function() {
+    $scope.showAbout = !$scope.showAbout
+  }
+  
+  $scope.toggleSocial = function(){
     $scope.showTwit = !$scope.showTwit
     $scope.showInstagram = !$scope.showInstagram
   }
-  $scope.toggleInstagram = function(){
-
+  
+  $scope.togglePlaylist = function(){
+    $scope.showPlaylist = !$scope.showPlaylist
   }
+  
   $scope.toggleScrobble = function(){
     $scope.showScrobble = !$scope.showScrobble
   }
@@ -126,6 +142,33 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     
     console.log($scope.playlist)
   }
+  
+  $scope.progressBarSeekMouseUp = function(data) {
+    
+    //console.log(data)
+  }
+  
+  $scope.seekPercentage = function ($event) {
+    var percentage = ($event.offsetX / window.innerWidth);
+    
+    if (percentage <= 1) {
+      return percentage;
+    } else {
+      return 0;
+    }
+  }
+  
+  $scope.playCurrent = function (data) {
+    
+    for (var i = 0; i < $scope.playlist.length; i++) {
+      if ($scope.playlist[i].src.indexOf(data) > -1) {
+        return i
+      }
+    }
+    
+  }
+  
+  
   
   
 }]);
