@@ -75,6 +75,9 @@
           <div>
             <div class="playButton" ng-click="audio1.playPause(playCurrent(block.text))">Play This</div>
           </div>
+          <div ng-show="(playCurrent(block.text) == audio1.currentTrack - 1) && audio1.playing">
+            playing!
+          </div>
         </div>
       </script>
       
@@ -124,8 +127,11 @@
           <span ng-show="audio1.playing">Player status: Playing</span>
           <span ng-show="!audio1.playing">Player status: Paused</span>
           <div class="playButton" ng-click="audio1.playPause(true)">play</div>
-          <div class="playButton" ng-click="audio1.next()">next</div>
-          <div class="playButton" ng-click="audio1.prev()">prev</div>
+          <div class="playButton" ng-click="prev()">prev</div>
+          <div class="playButton" ng-click="next()">next</div>
+          <div class="playButton" ng-click="toggleRepeat()">Repeat</div>
+          <div class="playButton" ng-click="toggleShuffle()">Shuffle</div>
+          
           
         </div>
         

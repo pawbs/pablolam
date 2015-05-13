@@ -15,6 +15,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.playlist = []
   $scope.music = []
+  $scope.playlistqueue = []
   
   $scope.currentSong = ""
   
@@ -63,17 +64,46 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
     //MUSIC INITIALIZATION STUFF
     $scope.playAll()
-    console.log($scope.audio1.playing)
-    
-    $scope.repeatOne = true;
     
     //REPEAT AND SHUFFLE EVENTS
     $scope.audio1.on('ended', function (evt) {
       console.log("ended")
       console.log($scope.audio1.currentTrack)
-      $scope.audio1.playPause($scope.audio1.currentTrack - 1, true)
+      if ($scope.repeatOne) {
+        $scope.audio1.playPause($scope.audio1.currentTrack - 1, true)
+      }
+      else {
+        $scope.next()
+      }
+
     })
     
+    $scope.next = function(x) {
+      if ($scope.audio1.currentTrack == $scope.playlist.length) {
+        if ($scope.repeatAll) {
+          $scope.audio1.playPause(0, true)
+        }
+      }
+      else {
+        $scope.audio1.playPause($scope.audio1.currentTrack)
+      }
+    }
+    
+    $scope.prev = function(x) {
+      if ($scope.audio1.currentTime > 3) {
+        $scope.audio1.seek(0)
+      }
+      else {
+        if ($scope.repeatAll){
+          if ($scope.audio1.currentTrack == 1) {
+            $scope.audio1.playPause($scope.playlist.length - 1, true)
+          }
+          else {
+            $scope.audio1.playPause($scope.audio1.currentTrack - 2)
+          }
+        }
+      }
+    }
   
   })
   
@@ -98,6 +128,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     }
   }
   
+  //TOGGLES
   $scope.toggleAbout = function() {
     $scope.showAbout = !$scope.showAbout
   }
@@ -113,6 +144,35 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.toggleScrobble = function(){
     $scope.showScrobble = !$scope.showScrobble
+  }
+  
+  $scope.toggleRepeat = function() {
+    if (!($scope.repeatOne || $scope.repeatAll)){
+      $scope.repeatAll = true
+    }
+    else if ($scope.repeatAll) {
+      $scope.repeatAll = false
+      $scope.repeatOne = true
+    }
+    else {
+      $scope.repeatOne = false
+    }
+  }
+  
+  $scope.toggleShuffle = function() {
+    $scope.shuffle = !$scope.shuffle
+    if ($scope.shuffle){
+      //shuffle
+      curTrack = $scope.playlist[$scope.audio1.currentTrack - 1]
+      
+      //..And then persist first song
+      $scope.playlist = $scope.shuffleList($scope.playlist)
+      $scope.playlist[$scope.playlist.indexOf(curTrack)] = $scope.playlist[0]
+      $scope.playlist[0] = curTrack
+    }
+    else {
+      $scope.playAll()
+    }
   }
   
   //SCROLL FUNCTIONS
@@ -149,15 +209,17 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   //MUSIC FUNCTIONS
   $scope.playAll = function() {
     for (var i = 0; i < $scope.music.length; i++) {
-      //console.log(i)
-      //console.log($scope.music[i].text)
       $scope.playlist[i] = {}
       $scope.playlist[i].src = "../mp3/" + $scope.music[i].text + ".mp3"
       $scope.playlist[i].type = "audio/mp3"
     }
-    
-    console.log($scope.playlist)
   }
+  
+  $scope.shuffleList = function (o){
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+  }  
+  
   
   $scope.seekPercentage = function ($event) {
     var percentage = ($event.offsetX / window.innerWidth);
@@ -181,5 +243,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     if (curTime == undefined) return 0
     return curTime*100/durTime
   }
+  
+  
   
 }]);
