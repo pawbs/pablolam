@@ -18,6 +18,10 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.currentSong = ""
   
+  $scope.repeatOne = false
+  $scope.repeatAll = false
+  $scope.shuffle = false
+  
   var Json = $resource('/feed/dbPull');
   
   //QUERY FUNCTIONS
@@ -57,7 +61,19 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
       return el.type == "lastfm"
     });
   
+    //MUSIC INITIALIZATION STUFF
     $scope.playAll()
+    console.log($scope.audio1.playing)
+    
+    $scope.repeatOne = true;
+    
+    //REPEAT AND SHUFFLE EVENTS
+    $scope.audio1.on('ended', function (evt) {
+      console.log("ended")
+      console.log($scope.audio1.currentTrack)
+      $scope.audio1.playPause($scope.audio1.currentTrack - 1, true)
+    })
+    
   
   })
   
@@ -143,11 +159,6 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     console.log($scope.playlist)
   }
   
-  $scope.progressBarSeekMouseUp = function(data) {
-    
-    //console.log(data)
-  }
-  
   $scope.seekPercentage = function ($event) {
     var percentage = ($event.offsetX / window.innerWidth);
     
@@ -159,16 +170,16 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   }
   
   $scope.playCurrent = function (data) {
-    
     for (var i = 0; i < $scope.playlist.length; i++) {
       if ($scope.playlist[i].src.indexOf(data) > -1) {
         return i
       }
-    }
-    
+    } 
   }
   
-  
-  
+  $scope.progressBarStyle = function (curTime, durTime) {
+    if (curTime == undefined) return 0
+    return curTime*100/durTime
+  }
   
 }]);

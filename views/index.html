@@ -40,6 +40,10 @@
           {{audio1.formatDuration}}
           {{audio1.volume}}
           {{audio1.loadPercent}}
+          {{audio1.ended}}
+          repeat One:{{repeatOne}}
+          repeat All:{{repeatAll}}
+          shuffle: {{shuffle}}
           
         </div>
       </script>
@@ -112,14 +116,14 @@
         </div>
         
         <div class="progressBarBack" ng-click="audio1.seek(audio1.duration * seekPercentage($event)); progressBarSeekMouseUp(seekPercentage($event))">
-          <div class="progressBar" ng-style="{ width: audio1.currentTime*100/audio1.duration + '%' }"></div>
+          <div class="progressBar" ng-style="{ width: progressBarStyle(audio1.currentTime, audio1.duration) + '%' }"></div>
         </div>
         
         <div class="musicPlayer">
           <audio media-player="audio1" data-playlist="playlist"></audio>
           <span ng-show="audio1.playing">Player status: Playing</span>
           <span ng-show="!audio1.playing">Player status: Paused</span>
-          <div class="playButton" ng-click="audio1.playPause()">play</div>
+          <div class="playButton" ng-click="audio1.playPause(true)">play</div>
           <div class="playButton" ng-click="audio1.next()">next</div>
           <div class="playButton" ng-click="audio1.prev()">prev</div>
           
