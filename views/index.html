@@ -49,16 +49,23 @@
       </script>
     
       <script type="text/ng-template" id="twitter">
-        <div class="pabloTwitFeedBlock">
-          <div ng-style="{{getStyleFromIndex(pabloFeed.indexOf(block), block.favorite_count)}}">
-            <div>
-              {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
-            </div>
-            <div class="pabloTwitFeedBlockText">
-              {{block.text}}
-            </div>
-            <div ng-show="block.entities.media != null">
-              {{block.entities.media[0].media_url}}
+        <div class="pabloTwitFeedBlock" ng-style="{{getStyleFromIndex(pabloFeed.indexOf(block), block.favorite_count)}}">
+          <div>
+            <div class="pabloTwitFeedBlockContent">
+              <div>
+                {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+              </div>
+              <div class="pabloTwitFeedBlockText">
+                {{block.text}}
+              </div>
+              <!--
+              <div ng-show="block.entities.media != null">
+                {{block.entities.media[0].media_url}}
+              </div>
+              -->
+              <div class="pabloTwitFeedBlockTypeText">
+                @pawBs
+              </div>
             </div>
           </div>
         </div>
@@ -66,11 +73,16 @@
       
       <script type="text/ng-template" id="lastfm">
         <div class="pabloLastFMFeedBlock">
-          <div>
-            {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
-          </div>
-          <div>
-            {{block.artist}} - {{block.text}}
+          <div class="pabloLastFMFeedBlockText">
+            <div class="pabloLastFMFeedBlockTextTime">
+              {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+            </div>
+            <div class="pabloLastFMFeedBlockTextArtist">
+              {{block.artist}}
+            </div>
+            <div class="pabloLastFMFeedBlockTextTitle">
+              {{block.text}}
+            </div>
           </div>
           <div>
             <div class="playButton" ng-click="audio1.playPause(playCurrent(block.text))">Play This</div>
@@ -83,11 +95,20 @@
       
       <script type="text/ng-template" id="instagram">
         <div class="pabloIGFeedBlock">
-          {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
-          <span ng-style="{'background-image':'url({{block.image}})', 'background-size':'cover', 'height':'100%', 'display':'block', 'padding-bottom':'100%'}">
-          </span>
+          <div class="pabloIGFeedBlockContent">
+            {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+            <!--
+            <span ng-style="{'background-image':'url({{block.image}})', 'background-size':'contain', 'height':'100%', 'display':'block', 'background-repeat':'no-repeat'}">
+            </span>
+            -->
+            <img src="{{block.image}}" width="460px"></img>
+            <div class="pabloIGFeedBlockText">
+              {{block.text}}
+            </div>
+          </div>
+        <div class="pabloIGFeedBlockType">
+          @pawbs709
         </div>
-        <div>
         </div>
       </script>
       
@@ -97,6 +118,26 @@
             <li><a href="https://www.facebook.com/pawbs">Facebook</a></li>
             <li><a href="https://twitter.com/pawBs">Twitter</a></li>
             <li><a href="www.last.fm/user/pb_overflow">Last FM</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">    
+            <li ng-click="audio1.seek(audio1.duration * seekPercentageNav($event, 300))">
+              <div class="progressBarBackNav">
+                <div class="progressBarNav" ng-style="{ width: progressBarStyle(audio1.currentTime, audio1.duration) + '%' }"></div>
+              </div>
+            </li>
+            <li ng-click="audio1.setVolume(0)">
+              <div class="divider1">
+              &#xe038;
+              </div>
+            </li>
+            <li ng-click="audio1.setVolume(seekPercentageNav($event, 75))">
+              <div class="volumeBarBackNav">
+                <div class="volumeBarNav" ng-style="{ width: (audio1.volume * 100) + '%' }"></div>
+              </div>
+            </li>
+            <li ng-click="audio1.setVolume(1)">
+              <div class="divider2"></div>
+            </li>
           </ul>
         </div>
       </script>
@@ -118,11 +159,11 @@
         <div class="pabloHeader">
         </div>
         
-        <div class="progressBarBack" ng-click="audio1.seek(audio1.duration * seekPercentage($event)); progressBarSeekMouseUp(seekPercentage($event))">
+        <div class="progressBarBack" ng-click="audio1.seek(audio1.duration * seekPercentage($event))">
           <div class="progressBar" ng-style="{ width: progressBarStyle(audio1.currentTime, audio1.duration) + '%' }"></div>
         </div>
         
-        <div class="musicPlayer">
+        <div class="musicPlayer" ng-show="false">
           <audio media-player="audio1" data-playlist="playlist"></audio>
           <span ng-show="audio1.playing">Player status: Playing</span>
           <span ng-show="!audio1.playing">Player status: Paused</span>
@@ -155,7 +196,7 @@
       </div>
 
       
-      <div class="stickyFooterCenter">
+      <div class="stickyFooterCenter" ng-show="true">
         <div class="stickyFooterTop" ng-click="goToTop()"></div>
         <div class="stickyFooterTwit" ng-click="toggleAbout()"></div>
         <div class="stickyFooterTwit" ng-click="toggleSocial()"></div>

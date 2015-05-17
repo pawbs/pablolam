@@ -1,10 +1,51 @@
+//FONTS
+
+@font-face {
+  font-family: adam;
+  src: url('../../fonts/ADAM.CG PRO.otf');
+}
+
+@font-face {
+  font-family: mohave;
+  src: url('../../fonts/Mohave.otf');
+}
+
+@font-face {
+  font-family: mohave;
+  src: url('../../fonts/Mohave-Bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: jaapokki;
+  src: url('../../fonts/Jaapokkisubtract-Regular.otf');
+}
+
+@font-face {
+  font-family: jaapokki;
+  src: url('../../fonts/Jaapokkienchance-Regular.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: bariol;
+  src: url('../../fonts/Bariol_Regular.otf');
+}
+
+@font-face {
+  font-family: glyphicons;
+  src: url('../../fonts/glyphicons-halflings-regular.woff') format("woff");
+}
+
+
+
+//MAIN
 html {
   height: 100%;
 }
 
 body {
   font-size: 9.5pt;
-  line-height:100%;
   height: 100%;
 }
 
@@ -12,7 +53,6 @@ body {
 }
 
 .pabloHeader {
-
   background-image: url(../../images/header.png);
   width: 100%;
   //margin-top: 51px;
@@ -20,32 +60,32 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: fixed;
-
+  -webkit-box-shadow: inset 0px 0px 12px 2px rgba(0,0,0,0.30);
+  -moz-box-shadow: inset 0px 0px 12px 2px rgba(0,0,0,0.30);
+  box-shadow: inset 0px 0px 12px 2px rgba(0,0,0,0.30);
 }
 
 .pabloFeed {
   min-height:500px;
+  width: 795px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pabloFeedBlock {
-  width: 506px;
-  //height: 80px;
-  //border: 1px solid #bbbbbb;
   
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   
   color: #ffffff;
-  
-  font-size: 14pt;
-  line-height: 100%;
-  
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: top;
   
 }
 
 //Feed blocks
+//MISC
 .pabloAboutFeedBlock {
   color: #000000;
   background-color: #00fff0;
@@ -56,31 +96,80 @@ body {
   color: #000000;
   background-color: #00fff0;
   height: 700px;
+  min-width: 1020px;
 }
 
+//Feed blocks
+//Twitter
 .pabloTwitFeedBlock {
   //background-color: #00CCFF;
-  //padding-top: 30px;
-  //padding-bottom: 30px;
-  //padding-left: 30px;
-  //padding-right: 30px;
   
   color: #000000;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 245px;
+  min-height: 245px;
+  position: relative;
+
+}
+
+.pabloTwitFeedBlockContent {
+  padding: 25px;
 }
 
 .pabloTwitFeedBlockText {
   color: #000000;
+  font-size: 20px;
+  line-height: 100%;
 }
 
+.pabloTwitFeedBlockTypeText {
+  font-family: 'adam';
+  color: #c2c2c2;
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 4px;
+}
+
+//Feed blocks
+//IG
 .pabloIGFeedBlock {
-  background-color: #A37547;
-  height: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  background-color: #675144;
+  //background-image: url(../../images/instaback.png);
+  height: 600px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 510px;
+  position: relative;
 }
 
+.pabloIGFeedBlockContent {
+  height: 550px;
+}
+
+.pabloIGFeedBlockText {
+  font-size: 30px;
+  line-height: 100%;
+  font-family: 'bariol';
+}
+
+.pabloIGFeedBlockType {
+  font-family: 'adam';
+  color: #4b4b4b;
+  font-size: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 4px;
+}
+
+//Feed blocks
+//LASTFM
 .pabloLastFMFeedBlock {
   //background-color: #000000;
   background-image: url(../../images/lastfmback.png);
@@ -89,6 +178,41 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 775px;
+  height: 245px;
+  position: relative;
+}
+
+.pabloLastFMFeedBlockText {
+  text-align: right;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.pabloLastFMFeedBlockTextArtist {
+  font-family: 'mohave';
+  font-weight: bold;
+  font-size: 20pt;
+  line-height: 100%;
+}
+
+.pabloLastFMFeedBlockTextTitle {
+  font-family: 'mohave';
+  font-size: 20pt;
+    line-height: 100%;
+}
+
+.pabloLastFMFeedBlockTextTime {
+  font-family: 'mohave';
+  font-size: 12pt;
+  line-height: 100%;
+}
+
+.pabloTwitFeedBlockTypeText {
+
 }
 
 //musicButtons
@@ -98,7 +222,7 @@ body {
 	-webkit-border-radius:28px;
 	border-radius:28px;
 	border:1px solid #18ab29;
-	display:inline-block;
+	display:table-cell;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
@@ -183,22 +307,20 @@ body {
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter,
 .animate-repeat.ng-leave {
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
 }
 
 .animate-repeat.ng-leave.ng-leave-active,
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter {
   opacity:0;
-  max-height:0;
 }
 
 .animate-repeat.ng-leave,
 .animate-repeat.ng-move.ng-move-active,
 .animate-repeat.ng-enter.ng-enter-active {
   opacity:1;
-  max-height:80px;
 }
 
 //Navbar prevent collapse
@@ -218,20 +340,17 @@ body {
   float: right!important;
 }
 
-//navbar transparency
-.navbar-innter {
-    background: transparent;
+.navbar-middle {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 //progressBar
 .progressBarBack {
-
   background-color: #ebebeb;
-  
   width: 100%;
   height: 6px;
   margin-bottom: 5px;
-  
 }
 
 .progressBar {
@@ -244,4 +363,65 @@ body {
 .progressBar.ng-move {
   -webkit-transition:all ease-out 0.5s;
   transition:all ease-out 0.5s;
+}
+
+.progressBarBackNav {
+  background-color: #ebebeb;
+  width: 300px;
+  height: 6px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  
+}
+
+.progressBarNav {
+  background-color: #FF0000;
+  height: 6px;
+  -webkit-transition:all ease-out 0.5s;
+  transition:all ease-out 0.5s;
+}
+
+.progressBarNav.ng-move {
+  -webkit-transition:all ease-out 0.5s;
+  transition:all ease-out 0.5s;
+}
+
+//volumeBar
+.volumeBarBackNav {
+  background-color: #ebebeb;
+  width: 75px;
+  height: 6px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.volumeBarNav {
+  background-color: #00FF00;
+  height: 6px;
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
+}
+
+.volumeBarNav.ng-move {
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
+}
+
+.divider1 {
+  min-width: 10px;
+  width: 40px;
+  height: 50px;
+  margin-right: 5px;
+  font-size: 16px;
+  margin-top: 14px;
+  text-align: right;
+  font-family: 'glyphicons';
+  
+}
+
+.divider2 {
+  min-width: 10px;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }

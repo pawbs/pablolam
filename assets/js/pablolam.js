@@ -189,21 +189,27 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
     switch(index % 4){
       case 0:
-        color = "#00CCFF"
+        color = "#bcb14a'"
+        back = "twitback1.png)'"
         break
       case 1:
-        color = "#00FF00"
+        color = "#2dde3a'"
+        back = "twitback2.png)'"
         break
       case 2:
-        color = "#FFFF00"
+        color = "#ff3cd8'"
+        back = "twitback3.png)'"
         break
       case 3:
-        color = "#ffC000"
+        color = "#00b4ff'"
+        back = "twitback4.png)'"
         break
     }
     
-    if (stars > 0) {return "{'background-color': '" + color +  "'}"}
-    else {return "{'color': '" + color +  "'}"}
+    borderStyle = ",'border-color': '" + color + "','border-style':'solid','border-width':'1px'"
+    //background-image: url(../../images/lastfmback.png)
+    if (stars > 0) {return "{'background-color': '" + color + ",'background-image': 'url(../../images/" + back + "}"}
+    else {return "{'color': '" + color + ",'background-image': 'url(../../images/" + back + "}"}
   }
   
   //MUSIC FUNCTIONS
@@ -223,7 +229,17 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.seekPercentage = function ($event) {
     var percentage = ($event.offsetX / window.innerWidth);
-    
+
+    if (percentage <= 1) {
+      return percentage;
+    } else {
+      return 0;
+    }
+  }
+  
+  $scope.seekPercentageNav = function ($event, fullWidth) {
+    var percentage = ($event.offsetX / fullWidth);
+
     if (percentage <= 1) {
       return percentage;
     } else {
