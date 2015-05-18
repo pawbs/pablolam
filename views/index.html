@@ -44,7 +44,7 @@
           repeat One:{{repeatOne}}
           repeat All:{{repeatAll}}
           shuffle: {{shuffle}}
-          
+          {{navToggleShuffle()}}
         </div>
       </script>
     
@@ -85,7 +85,7 @@
             </div>
           </div>
           <div>
-            <div class="playButton" ng-click="audio1.playPause(playCurrent(block.text))">Play This</div>
+            <div class="playButton" ng-click="feedPlay(playCurrent(block.text))">Play This</div>
           </div>
           <div ng-show="(playCurrent(block.text) == audio1.currentTrack - 1) && audio1.playing">
             playing!
@@ -122,16 +122,16 @@
           <ul class="nav navbar-nav navbar-right">    
             <li>
               <div class="artistTitleNav">
-                {{playlist[audio1.currentTrack - 1].artistTitle}}
+                {{navCurrentTrack()}}
               </div>
             </li>
             <li>
               <div class="playbackNav">
                 <span ng-click="prev()">&#xe071;</span>
-                <span ng-click="audio1.playPause(true)">{{navIsPlaying()}}</span>
+                <span ng-click="navPlay()">{{navIsPlaying()}}</span>
                 <span ng-click="next()">&#xe075;</span>
-                <span ng-style="navToggleShuffle()" ng-click="toggleShuffle()">&#xe110;</span>
-                <span ng-click="toggleRepeat()">&#xe030;</span>
+                <span style="{{navToggleShuffle()}}" ng-click="toggleShuffle()">&#xe110;</span>
+                <span style="{{navToggleRepeat()}}" ng-click="toggleRepeat()">{{navIsOnRepeatOne()}}</span>
               </div>
             </li>
             <li ng-click="audio1.seek(audio1.duration * seekPercentageNav($event, 300))">

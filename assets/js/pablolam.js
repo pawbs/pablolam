@@ -23,6 +23,8 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   $scope.repeatAll = false
   $scope.shuffle = false
   
+  $scope.firstPlay = false
+  
   var Json = $resource('/feed/dbPull');
   
   //QUERY FUNCTIONS
@@ -279,15 +281,52 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.navToggleShuffle = function() {
     if ($scope.shuffle) {
-      return "{'color': '#ff3cd8'}"
+      return "color: #bd3ba3"
     } 
     else {
       return ""
     }
   }
   
-  $scope.navToggleRepeat = function () {
-    
+  $scope.navToggleRepeat = function() {
+    if ($scope.repeatAll) {
+      return "color: #bd3ba3"
+    } 
+    else {
+      return ""
+    }
   }
+  
+  $scope.navIsOnRepeatOne = function () {
+    if ($scope.repeatOne) {
+      return '\ue088'
+    }
+    else {
+      return '\ue030'
+    }
+  }
+  
+  $scope.navCurrentTrack = function () {
+    if (!$scope.firstPlay){
+      return ""
+    } 
+    else {
+      return $scope.playlist[$scope.audio1.currentTrack - 1].artistTitle
+      return $scope.playlist[$scope.audio1.currentTrack - 1].artistTitle
+    }
+  }
+  
+  $scope.navPlay = function () {
+    $scope.audio1.playPause(true)
+    $scope.firstPlay = true
+  }
+  
+  $scope.feedPlay = function (track) {
+    $scope.audio1.playPause(track, true)
+    $scope.firstPlay = true
+  }
+
+  
+
   
 }]);
