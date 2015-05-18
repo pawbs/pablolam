@@ -99,7 +99,12 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
             $scope.audio1.playPause($scope.playlist.length - 1, true)
           }
           else {
-            $scope.audio1.playPause($scope.audio1.currentTrack - 2)
+            $scope.audio1.playPause($scope.audio1.currentTrack - 2, true)
+          }
+        }
+        else {
+          if ($scope.audio1.currentTrack > 1) {
+            $scope.audio1.playPause($scope.audio1.currentTrack - 2, true)
           }
         }
       }
@@ -218,6 +223,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
       $scope.playlist[i] = {}
       $scope.playlist[i].src = "../mp3/" + $scope.music[i].text + ".mp3"
       $scope.playlist[i].type = "audio/mp3"
+      $scope.playlist[i].artistTitle = $scope.music[i].artist + " - " + $scope.music[i].text
     }
   }
   
@@ -260,6 +266,28 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     return curTime*100/durTime
   }
   
+//NAV MUSIC PLAYBACK FUNCTIONS
+
+  $scope.navIsPlaying = function () {
+    if ($scope.audio1.playing) {
+      return '\ue073'
+    }
+    else {
+      return '\ue072'
+    }
+  }
   
+  $scope.navToggleShuffle = function() {
+    if ($scope.shuffle) {
+      return "{'color': '#ff3cd8'}"
+    } 
+    else {
+      return ""
+    }
+  }
+  
+  $scope.navToggleRepeat = function () {
+    
+  }
   
 }]);

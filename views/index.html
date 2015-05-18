@@ -120,6 +120,20 @@
             <li><a href="www.last.fm/user/pb_overflow">Last FM</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">    
+            <li>
+              <div class="artistTitleNav">
+                {{playlist[audio1.currentTrack - 1].artistTitle}}
+              </div>
+            </li>
+            <li>
+              <div class="playbackNav">
+                <span ng-click="prev()">&#xe071;</span>
+                <span ng-click="audio1.playPause(true)">{{navIsPlaying()}}</span>
+                <span ng-click="next()">&#xe075;</span>
+                <span ng-style="navToggleShuffle()" ng-click="toggleShuffle()">&#xe110;</span>
+                <span ng-click="toggleRepeat()">&#xe030;</span>
+              </div>
+            </li>
             <li ng-click="audio1.seek(audio1.duration * seekPercentageNav($event, 300))">
               <div class="progressBarBackNav">
                 <div class="progressBarNav" ng-style="{ width: progressBarStyle(audio1.currentTime, audio1.duration) + '%' }"></div>
@@ -132,7 +146,7 @@
             </li>
             <li ng-click="audio1.setVolume(seekPercentageNav($event, 75))">
               <div class="volumeBarBackNav">
-                <div class="volumeBarNav" ng-style="{ width: (audio1.volume * 100) + '%' }"></div>
+                <div class="volumeBarNav" ng-style="{ width: (audio1.volume * 100) + '%'}"></div>
               </div>
             </li>
             <li ng-click="audio1.setVolume(1)">
@@ -146,11 +160,11 @@
         
         <div class=navbar-container>
         
-          <nav class="navbar transparent navbar-fixed-top">
+          <nav class="navbar pabloNavbar transparent navbar-fixed-top">
             <div ng-include="'navContainer'"></div>
           </nav>
         
-          <nav class="navbar navbar-inverse navbar-fixed-top" skrollr data-0="opacity:0;" data-400="opacity:1; pointer-events: none;" data-401="pointer-events: visiblePainted;">
+          <nav class="navbar navbar-inverse pabloNavbarInverse navbar-fixed-top" skrollr data-0="opacity:0;" data-400="opacity:1; pointer-events: none;" data-401="pointer-events: visiblePainted;">
             <div ng-include="'navContainer'"></div>
           </nav>
           
