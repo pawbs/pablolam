@@ -3,7 +3,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
 .controller('FeedController', ['$scope', '$resource', '$timeout', '$templateCache', '$document',
   function($scope, $resource, $timeout, $templateCache, $document) {
 
-  $scope.infiniteDisabled = true
+  $scope.infiniteDisabled = false
   $scope.infiniteBusy = false
   $scope.navbarShow = true
 
@@ -38,7 +38,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     $scope.pabloFeed.push(json[$scope.pabloFeed.length])
     $scope.pabloFeed.push(json[$scope.pabloFeed.length])
     $scope.pabloFeed.push(json[$scope.pabloFeed.length])
-
+    
     $scope.loadMore = function() {
       
       if ($scope.infiniteBusy == false){
@@ -55,8 +55,13 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
           $scope.pabloFeed.push(json[$scope.pabloFeed.length])
+          $scope.pabloFeed.push(json[$scope.pabloFeed.length])
+          $scope.pabloFeed.push(json[$scope.pabloFeed.length])
+          $scope.pabloFeed.push(json[$scope.pabloFeed.length])
+          $scope.pabloFeed.push(json[$scope.pabloFeed.length])
+          $scope.pabloFeed.push(json[$scope.pabloFeed.length])
           
-        },1000).then( function() {})
+        },200).then( function() {})
       }
     }
     
@@ -116,6 +121,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   //FILTER FUNCTIONS
   $scope.filterByType = function(block){
+    
     switch (block.type) {
       case "music":
         if ($scope.showPlaylist) {return block}
@@ -193,7 +199,6 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   //QUERY COLOR FUNCTIONS
   $scope.getStyleFromIndex = function(index, stars) {
-  
     switch(index % 4){
       case 0:
         color = "#bcb14a'"
@@ -326,7 +331,8 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     $scope.firstPlay = true
   }
 
-  
-
+  $scope.refreshSkrollr = function () {
+    skrollr.get().refresh()
+  }
   
 }]);

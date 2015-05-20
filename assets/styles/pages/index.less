@@ -47,9 +47,11 @@ html {
 body {
   font-size: 9.5pt;
   height: 100%;
+  min-width: 795px;
 }
 
 .mainContainer {
+  background-color: #F9F9F9;
 }
 
 .pabloHeader {
@@ -66,6 +68,7 @@ body {
 }
 
 .pabloFeed {
+  padding-top: 5px;
   min-height:500px;
   width: 795px;
   margin-left: auto;
@@ -173,16 +176,27 @@ body {
 .pabloLastFMFeedBlock {
   //background-color: #000000;
   background-image: url(../../images/lastfmback.png);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  //padding-top: 30px;
+  //padding-bottom: 30px;
+  //padding-left: 30px;
+  //padding-right: 30px;
   
   margin-left: 10px;
   margin-right: 10px;
   min-width: 775px;
   height: 245px;
   position: relative;
+}
+
+.pabloLastFMFeedBlockPic {
+  width: 775px;
+  height: 245px;
+}
+
+.pabloLastFMFeedBlockPicStripe {
+  background-image: url(../../images/lastfmbackStripe.png);
+  width: 775px;
+  height: 245px;
 }
 
 .pabloLastFMFeedBlockText {
@@ -287,15 +301,59 @@ body {
   margin-top:12px
 }
 
+//Spinner
 .loadMoreButton {
-  width: 350px;
+  width: 40px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
+}
+
+.spinner-cube
+{
+    margin: 0 auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.spinner-cube > div
+{
+    background-color: #9d9d9d;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: cuberotate 1.8s infinite ease-in-out;
+    animation: cuberotate 1.8s infinite ease-in-out;
+}
+
+.spinner-cube div:nth-child(2)
+{
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+@-webkit-keyframes cuberotate {
+    25% { -webkit-transform: translateX(22px) rotate(-90deg) scale(0.5) }
+    50% { -webkit-transform: translateX(22px) translateY(22px) rotate(-180deg) }
+    75% { -webkit-transform: translateX(0px) translateY(22px) rotate(-270deg) scale(0.5) }
+    100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes cuberotate {
+    25% { transform: translateX(42px) rotate(-90deg) scale(0.5); } 
+    50% { transform: translateX(42px) translateY(42px) rotate(-179deg); } 
+    50.1% { transform: translateX(42px) translateY(42px) rotate(-180deg); } 
+    75% { transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5); } 
+    100% { transform: rotate(-360deg); }
 }
 
 .footer {
-  height: 50px;
-  background-color: #222222;
+  //height: 50px;
+  //background-color: #222222;
 }
 
 //CSS Animations
@@ -307,8 +365,8 @@ body {
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter,
 .animate-repeat.ng-leave {
-  -webkit-transition:all 0.5s;
-  transition:all 0.5s;
+  //-webkit-transition:all 0.5s;
+  //transition:all 0.5s;
 }
 
 .animate-repeat.ng-leave.ng-leave-active,
@@ -351,18 +409,20 @@ body {
 
 .pabloNavbar {
   color: #337ab7;
+  min-width: 1050px;
 }
 
 .pabloNavbarInverse {
   color: #9d9d9d;
+  min-width: 1050px;
 }
 
 //progressBar
 .progressBarBack {
-  background-color: #ebebeb;
+  background-color: #ffffff;
   width: 100%;
   height: 6px;
-  margin-bottom: 5px;
+  //margin-bottom: 5px;
 }
 
 .progressBar {

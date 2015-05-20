@@ -73,22 +73,26 @@
       
       <script type="text/ng-template" id="lastfm">
         <div class="pabloLastFMFeedBlock">
-          <div class="pabloLastFMFeedBlockText">
-            <div class="pabloLastFMFeedBlockTextTime">
-              {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+          <div class="pabloLastFMFeedBlockPic" style="background-image:url('../../mp3/{{block.text}}.png')" skrollr data-top-bottom="background-position:0% 100%;" data-bottom-top="background-position:0% 0%;">
+            <div class="pabloLastFMFeedBlockPicStripe" ng-init="refreshSkrollr()">
+              <div class="pabloLastFMFeedBlockText">
+                <div class="pabloLastFMFeedBlockTextTime">
+                  {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
+                </div>
+                <div class="pabloLastFMFeedBlockTextArtist">
+                  {{block.artist}}
+                </div>
+                <div class="pabloLastFMFeedBlockTextTitle">
+                  {{block.text}}
+                </div>
+              </div>
+              <div>
+                <div class="playButton" ng-click="feedPlay(playCurrent(block.text))">Play This</div>
+              </div>
+              <div ng-show="(playCurrent(block.text) == audio1.currentTrack - 1) && audio1.playing">
+                playing!
+              </div>
             </div>
-            <div class="pabloLastFMFeedBlockTextArtist">
-              {{block.artist}}
-            </div>
-            <div class="pabloLastFMFeedBlockTextTitle">
-              {{block.text}}
-            </div>
-          </div>
-          <div>
-            <div class="playButton" ng-click="feedPlay(playCurrent(block.text))">Play This</div>
-          </div>
-          <div ng-show="(playCurrent(block.text) == audio1.currentTrack - 1) && audio1.playing">
-            playing!
           </div>
         </div>
       </script>
@@ -97,10 +101,6 @@
         <div class="pabloIGFeedBlock">
           <div class="pabloIGFeedBlockContent">
             {{block.pabloDate * 1000 | date:'yyyy-MM-dd HH:mm'}}
-            <!--
-            <span ng-style="{'background-image':'url({{block.image}})', 'background-size':'contain', 'height':'100%', 'display':'block', 'background-repeat':'no-repeat'}">
-            </span>
-            -->
             <img src="{{block.image}}" width="460px"></img>
             <div class="pabloIGFeedBlockText">
               {{block.text}}
@@ -155,7 +155,6 @@
           </ul>
         </div>
       </script>
-      
       <div class="mainContainer" ng-controller="FeedController">
         
         <div class=navbar-container>
@@ -189,7 +188,7 @@
           
           
         </div>
-        
+
         <div class="pabloFeed">
           <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
             <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
@@ -200,22 +199,24 @@
         </div>
       
       <div class="loadMoreButton">
-        <button ng-click="loadMore()">
-          Moar!!
-        </button>
+        <div class="spinner-cube">
+          <div></div>
+          <div></div>
+        </div>
       </div>
       
       <div class="footer">
-        footer
       </div>
 
       
-      <div class="stickyFooterCenter" ng-show="true">
+      <div class="stickyFooterCenter" ng-show="false">
         <div class="stickyFooterTop" ng-click="goToTop()"></div>
         <div class="stickyFooterTwit" ng-click="toggleAbout()"></div>
         <div class="stickyFooterTwit" ng-click="toggleSocial()"></div>
         <div class="stickyFooterTwit" ng-click="togglePlaylist()"></div>
         <div class="stickyFooterScrobble" ng-click="toggleScrobble()"></div>
+      </div>
+    
       </div>
     
     </div>
