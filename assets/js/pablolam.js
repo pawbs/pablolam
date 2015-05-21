@@ -77,7 +77,8 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
       console.log("ended")
       console.log($scope.audio1.currentTrack)
       if ($scope.repeatOne) {
-        $scope.audio1.playPause($scope.audio1.currentTrack - 1, true)
+        //$scope.audio1.playPause($scope.audio1.currentTrack - 1, true)
+        $scope.firstPlay = false
       }
       else {
         $scope.next()
@@ -268,6 +269,17 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
     } 
   }
   
+  $scope.trackIsPlaying = function (index) {
+    if (($scope.playCurrent(index)==$scope.audio1.currentTrack - 1) && $scope.audio1.playing){
+    //console.log($scope.playCurrent(json[index+2].text))
+      return '\ue073'
+    }
+    else {
+      return '\ue072'
+    }
+    
+  }
+  
   $scope.progressBarStyle = function (curTime, durTime) {
     if (curTime == undefined) return 0
     return curTime*100/durTime
@@ -286,7 +298,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.navToggleShuffle = function() {
     if ($scope.shuffle) {
-      return "color: #bd3ba3"
+      return "color: #5EB5FC"
     } 
     else {
       return ""
@@ -295,7 +307,7 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.navToggleRepeat = function() {
     if ($scope.repeatAll) {
-      return "color: #bd3ba3"
+      return "color: #5EB5FC"
     } 
     else {
       return ""

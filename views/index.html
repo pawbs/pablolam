@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
+<html ng-app="pablolam">
   <head>
-    <title>Pablo Lam Landing Page</title>
+    
     
     <script src="js/dependencies/jquery/dist/jquery.min.js"></script>
     <script src="js/dependencies/angular/angular.min.js"></script>
@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="js/dependencies/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/importer.css">
     
-    
+    <title></title>
     
   </head>
-    <body ng-app="pablolam">
+    <body>
     
       <script type="text/ng-template" id="about">
         <div class="pabloAboutFeedBlock">
@@ -64,7 +64,7 @@
               </div>
               -->
               <div class="pabloTwitFeedBlockTypeText">
-                @pawBs
+                <a class="disableLinkClass" ng-href="https://twitter.com/pawBs/status/{{block.id_str}}">@pawBs</a>
               </div>
             </div>
           </div>
@@ -87,10 +87,10 @@
                 </div>
               </div>
               <div>
-                <div class="playButton" ng-click="feedPlay(playCurrent(block.text))">Play This</div>
+                <div class="playButton" ng-click="feedPlay(playCurrent(block.text))">{{trackIsPlaying(block.text)}}</div>
               </div>
-              <div ng-show="(playCurrent(block.text) == audio1.currentTrack - 1) && audio1.playing">
-                playing!
+              <div class="pabloLastFMFeedBlockTypeText">
+                <a class="disableLinkClass" href="http://www.last.fm/user/pb_overflow">@pb_overflow</a>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@
             </div>
           </div>
         <div class="pabloIGFeedBlockType">
-          @pawbs709
+          <a class="disableLinkClass" ng-href="{{block.link}}">@pawbs709</a>
         </div>
         </div>
       </script>
@@ -115,9 +115,7 @@
       <script type="text/ng-template" id="navContainer">
         <div class="navbar-container">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="https://www.facebook.com/pawbs">Facebook</a></li>
-            <li><a href="https://twitter.com/pawBs">Twitter</a></li>
-            <li><a href="www.last.fm/user/pb_overflow">Last FM</a></li>
+            <li><a href="#" ng-click="goToTop()">Go Back To Top</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">    
             <li>
@@ -127,14 +125,14 @@
             </li>
             <li>
               <div class="playbackNav">
-                <span ng-click="prev()">&#xe071;</span>
-                <span ng-click="navPlay()">{{navIsPlaying()}}</span>
-                <span ng-click="next()">&#xe075;</span>
-                <span style="{{navToggleShuffle()}}" ng-click="toggleShuffle()">&#xe110;</span>
-                <span style="{{navToggleRepeat()}}" ng-click="toggleRepeat()">{{navIsOnRepeatOne()}}</span>
+                <span class="playbackNavButton" ng-click="prev()">&#xe071;</span>
+                <span class="playbackNavButton" ng-click="navPlay()">{{navIsPlaying()}}</span>
+                <span nclass="playbackNavButton" g-click="next()">&#xe075;</span>
+                <span class="playbackNavButton" style="{{navToggleShuffle()}}" ng-click="toggleShuffle()">&#xe110;</span>
+                <span class="playbackNavButton" style="{{navToggleRepeat()}}" ng-click="toggleRepeat()">{{navIsOnRepeatOne()}}</span>
               </div>
             </li>
-            <li ng-click="audio1.seek(audio1.duration * seekPercentageNav($event, 300))">
+            <li class="playbackNavButton" ng-click="audio1.seek(audio1.duration * seekPercentageNav($event, 300))">
               <div class="progressBarBackNav">
                 <div class="progressBarNav" ng-style="{ width: progressBarStyle(audio1.currentTime, audio1.duration) + '%' }"></div>
               </div>
@@ -144,7 +142,7 @@
               &#xe038;
               </div>
             </li>
-            <li ng-click="audio1.setVolume(seekPercentageNav($event, 75))">
+            <li class="playbackNavButton" ng-click="audio1.setVolume(seekPercentageNav($event, 75))">
               <div class="volumeBarBackNav">
                 <div class="volumeBarNav" ng-style="{ width: (audio1.volume * 100) + '%'}"></div>
               </div>
@@ -163,13 +161,43 @@
             <div ng-include="'navContainer'"></div>
           </nav>
         
-          <nav class="navbar navbar-inverse pabloNavbarInverse navbar-fixed-top" skrollr data-0="opacity:0;" data-400="opacity:1; pointer-events: none;" data-401="pointer-events: visiblePainted;">
+          <nav class="navbar navbar-inverse pabloNavbarInverse navbar-fixed-top" skrollr data-0="opacity:0;" data-800="opacity:1; pointer-events: none;" data-801="pointer-events: visiblePainted;">
             <div ng-include="'navContainer'"></div>
           </nav>
           
         </div>
         
         <div class="pabloHeader">
+          <div class="pabloHeaderTextOuter">
+            <div class="pabloHeaderTextInner">
+              Heyhey!
+              
+              <div class="pabloHeaderTextInnerSubtitle">
+                <div>blahblahblahblahblahblah</div>
+                <div>wordswordswords</div>
+                <div>radiator</div>
+              </div>
+              
+            </div>
+            <div class="pabloHeaderTextIcons">
+              <span><a href="https://twitter.com/pawBs">
+                <img width="80" src="images/icons/icons-04.png"></img>
+              </a></span>
+              <span><a href="www.last.fm/user/pb_overflow">
+                <img width="80" src="images/icons/icons-07.png"></img>
+              </a></span>
+              <a href="https://instagram.com/pawbs709">
+                <img width="80" src="images/icons/icons-05.png"></img>
+              </a>
+              <a href="https://www.facebook.com/pawbs">
+                <img width="80" src="images/icons/icons-03.png"></img>
+              </a>
+              <a href="https://ca.linkedin.com/pub/pablo-lam/68/5b4/414">
+                <img width="80" src="images/icons/icons-06.png"></img>
+              </a>
+              
+            </div>
+          </div>
         </div>
         
         <div class="progressBarBack" ng-click="audio1.seek(audio1.duration * seekPercentage($event))">
@@ -185,10 +213,18 @@
           <div class="playButton" ng-click="next()">next</div>
           <div class="playButton" ng-click="toggleRepeat()">Repeat</div>
           <div class="playButton" ng-click="toggleShuffle()">Shuffle</div>
-          
-          
         </div>
 
+        <div class="aboutHeader">
+          Who are you?
+        </div>
+          
+        <div class="aboutContent">
+          I'm a developer from Toronto, and that's pretty much all the information I'm willing to give out to anybody that just stumbled into this website. The only reason this "who are you?" section exists is because you need a decent amount of text for good webdesign. (I didn't study webdesign.. but I browsed behance for an hour, so good enough, right?) This is just placeholder text, so I might rewrite this with something better someday maybe.        
+        <br></br>
+        <br><i>tl;dr I'm a developer from Toronto, the end</i></br>
+        </div>
+        
         <div class="pabloFeed">
           <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
             <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
