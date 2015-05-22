@@ -47,10 +47,6 @@ module.exports = {
    */
   dbPull: function (req, res) {
 
-    sails.log.info("pulling tweets from db");
-    //return(Feed.find().sort({date: 1}).exec(function(){}))
-    
-
     Feed.find().sort({pabloDate : -1}).exec(findResponse)
     
     function findResponse(err,data){
