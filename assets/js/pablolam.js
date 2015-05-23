@@ -25,6 +25,8 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
   
   $scope.firstPlay = false
   
+  $scope.hoverNavContext = ""
+  
   var Json = $resource('/feed/dbPull');
   
   //QUERY FUNCTIONS
@@ -331,6 +333,19 @@ angular.module('pablolam', ['ngResource', 'infinite-scroll', 'ngAnimate', 'duScr
       return $scope.playlist[$scope.audio1.currentTrack - 1].artistTitle
       return $scope.playlist[$scope.audio1.currentTrack - 1].artistTitle
     }
+  }
+  
+  $scope.navContext = function () {
+    if ($scope.hoverNavContext) {
+      return $scope.hoverNavContext
+    }
+    else {
+      return $scope.navCurrentTrack()
+    }
+  }
+  
+  $scope.setNavContext = function (context) {
+    $scope.hoverNavContext = context
   }
   
   $scope.navPlay = function () {

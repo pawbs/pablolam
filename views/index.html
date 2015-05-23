@@ -119,20 +119,20 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">    
             <li>
-              <div class="artistTitleNav">
-                {{navCurrentTrack()}}
+              <div class="artistTitleNav"">
+                {{navContext()}}
               </div>
             </li>
             <li>
               <div class="playbackNav">
-                <span class="playbackNavButton" ng-click="prev()">&#xe071;</span>
-                <span class="playbackNavButton" ng-click="navPlay()">{{navIsPlaying()}}</span>
-                <span class="playbackNavButton" ng-click="next()">&#xe075;</span>
-                <span class="playbackNavButton" style="{{navToggleShuffle()}}" ng-click="toggleShuffle()">&#xe110;</span>
-                <span class="playbackNavButton" style="{{navToggleRepeat()}}" ng-click="toggleRepeat()">{{navIsOnRepeatOne()}}</span>
+                <span class="playbackNavButton" ng-click="prev()" ng-mouseover="setNavContext('Previous Track')" ng-mouseleave="setNavContext('')">&#xe071;</span>
+                <span class="playbackNavButton" ng-click="navPlay()" ng-mouseover="setNavContext('Play/Pause')" ng-mouseleave="setNavContext('')">{{navIsPlaying()}}</span>
+                <span class="playbackNavButton" ng-click="next()" ng-mouseover="setNavContext('Next Track')" ng-mouseleave="setNavContext('')">&#xe075;</span>
+                <span class="playbackNavButton" style="{{navToggleShuffle()}}" ng-click="toggleShuffle()" ng-mouseover="setNavContext('Toggle Shuffle')" ng-mouseleave="setNavContext('')">&#xe110;</span>
+                <span class="playbackNavButton" style="{{navToggleRepeat()}}" ng-click="toggleRepeat()" ng-mouseover="setNavContext('Toggle Repeat')" ng-mouseleave="setNavContext('')">{{navIsOnRepeatOne()}}</span>
               </div>
             </li>
-            <li class="playbackNavButton" ng-click="audio1.seek(audio1.duration * seekPercentageNav($event, 300))">
+            <li class="playbackNavButton" ng-click="audio1.seek(audio1.duration * seekPercentageNav($event, 300))" ng-mouseover="setNavContext('Seek Bar')" ng-mouseleave="setNavContext('')">
               <div class="progressBarBackNav">
                 <div class="progressBarNav" ng-style="{ width: progressBarStyle(audio1.currentTime, audio1.duration) + '%' }"></div>
               </div>
@@ -142,7 +142,7 @@
               &#xe038;
               </div>
             </li>
-            <li class="playbackNavButton" ng-click="audio1.setVolume(seekPercentageNav($event, 75))">
+            <li class="playbackNavButton" ng-click="audio1.setVolume(seekPercentageNav($event, 75))" ng-mouseover="setNavContext('Volume')" ng-mouseleave="setNavContext('')">
               <div class="volumeBarBackNav">
                 <div class="volumeBarNav" ng-style="{ width: (audio1.volume * 100) + '%'}"></div>
               </div>
@@ -180,12 +180,12 @@
               
             </div>
             <div class="pabloHeaderTextIcons">
-              <span><a href="https://twitter.com/pawBs">
+              <a href="https://twitter.com/pawBs">
                 <img width="80" src="images/icons/icons-04.png"></img>
-              </a></span>
-              <span><a href="www.last.fm/user/pb_overflow">
+              </a>
+              <a href="www.last.fm/user/pb_overflow">
                 <img width="80" src="images/icons/icons-07.png"></img>
-              </a></span>
+              </a>
               <a href="https://instagram.com/pawbs709">
                 <img width="80" src="images/icons/icons-05.png"></img>
               </a>

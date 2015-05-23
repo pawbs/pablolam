@@ -66,10 +66,14 @@ a {
   text-decoration: none;
 }
 
-.disableLinkClass, .disableLinkClass:hover, 
-.disableLinkClass:active, .disableLinkClass:visited , .disableLinkClass:link{
+.disableLinkClass, .disableLinkClass:active,
+ .disableLinkClass:visited , .disableLinkClass:link{
   color: #c2c2c2;
   text-decoration: none;
+}
+
+.disableLinkClass:hover {
+  color: #5EB5FC;
 }
 
 .mainContainer {
@@ -324,6 +328,11 @@ a {
   right: 11px;
 }
 
+.playButton:hover {
+  color: #5EB5FC;
+	border:5px solid #5EB5FC;
+}
+
 //stickyFooterToolbarCircles
 .stickyFooterCenter {
   position: fixed;
@@ -436,8 +445,8 @@ a {
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter,
 .animate-repeat.ng-leave {
-  //-webkit-transition:all 0.5s;
-  //transition:all 0.5s;
+  -webkit-transition:all 0.5s;
+  transition:all 0.5s;
 }
 
 .animate-repeat.ng-leave.ng-leave-active,
@@ -593,6 +602,10 @@ a {
 
 .playbackNavButton {
   cursor:pointer;
+}
+
+.playbackNavButton:active {
+  color: #5EB5FC;
 }
 
 .artistTitleNav {
