@@ -173,9 +173,9 @@
               Heyhey!
               
               <div class="pabloHeaderTextInnerSubtitle">
-                <div>blahblahblahblahblahblah</div>
-                <div>wordswordswords</div>
-                <div>radiator</div>
+                <div>This page connects all</div>
+                <div>my social media accounts</div>
+                <div>together, it's that simple</div>
               </div>
               
             </div>
@@ -183,7 +183,7 @@
               <a href="https://twitter.com/pawBs">
                 <img width="80" src="images/icons/icons-04.png"></img>
               </a>
-              <a href="www.last.fm/user/pb_overflow">
+              <a href="http://www.last.fm/user/pb_overflow">
                 <img width="80" src="images/icons/icons-07.png"></img>
               </a>
               <a href="https://instagram.com/pawbs709">
@@ -214,44 +214,45 @@
           <div class="playButton" ng-click="toggleRepeat()">Repeat</div>
           <div class="playButton" ng-click="toggleShuffle()">Shuffle</div>
         </div>
-
-        <div class="aboutHeader">
-          Who are you?
-        </div>
-          
-        <div class="aboutContent">
-          I'm a developer from Toronto, and that's pretty much all the information I'm willing to give out to anybody that just stumbled into this website. The only reason this "who are you?" section exists is because you need a decent amount of text for good webdesign. (I didn't study webdesign.. but I browsed behance for an hour, so good enough, right?) This is just placeholder text, so I might rewrite this with something better someday maybe.        
-        <br></br>
-        <br><i>tl;dr I'm a developer from Toronto, the end</i></br>
-        </div>
         
-        <div class="pabloFeed">
-          <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
-            <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
-              <div ng-include="block.type">
+        <div class="MainContainerContent">
+          <div class="aboutHeader">
+            "Who are you?"
+          </div>
+            
+          <div class="aboutContent">
+            I'm a developer from Toronto, and that's pretty much all the information I'm willing to give out to anybody that just stumbled into this website. The only reason this "who are you?" section exists is because you need a decent amount of text for good webdesign. (I didn't study webdesign.. but I browsed behance for an hour, so good enough, right?) This is just placeholder text, so I might rewrite this with something better someday maybe.        
+          <br></br>
+          <br><i>tl;dr I'm a developer from Toronto, the end</i></br>
+          </div>
+          
+          <div class="pabloFeed">
+            <div infinite-scroll='loadMore()' infinite-scroll-distance='0' infinite-scroll-disabled='infiniteDisabled'>
+              <div ng-repeat='block in pabloFeed | filter:filterByType' class="pabloFeedBlock animate-repeat">
+                <div ng-include="block.type">
+                </div>
               </div>
             </div>
           </div>
+        
+        <div class="loadMoreButton">
+          <div class="spinner-cube">
+            <div></div>
+            <div></div>
+          </div>
         </div>
-      
-      <div class="loadMoreButton">
-        <div class="spinner-cube">
-          <div></div>
-          <div></div>
+        
+        <div class="footer">
         </div>
-      </div>
-      
-      <div class="footer">
-      </div>
 
-      
-      <div class="stickyFooterCenter" ng-show="false">
-        <div class="stickyFooterTop" ng-click="goToTop()"></div>
-        <div class="stickyFooterTwit" ng-click="toggleAbout()"></div>
-        <div class="stickyFooterTwit" ng-click="toggleSocial()"></div>
-        <div class="stickyFooterTwit" ng-click="togglePlaylist()"></div>
-        <div class="stickyFooterScrobble" ng-click="toggleScrobble()"></div>
-      </div>
+        
+        <div class="stickyFooterCenter" ng-show="false">
+          <div class="stickyFooterTop" ng-click="goToTop()"></div>
+          <div class="stickyFooterTwit" ng-click="toggleAbout()"></div>
+          <div class="stickyFooterTwit" ng-click="toggleSocial()"></div>
+          <div class="stickyFooterTwit" ng-click="togglePlaylist()"></div>
+          <div class="stickyFooterScrobble" ng-click="toggleScrobble()"></div>
+        </div>
     
       </div>
     
