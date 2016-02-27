@@ -12,11 +12,13 @@
 module.exports.bootstrap = function(cb) {
 
   //cron scheduler
-  var schedule = require('node-schedule');
-  Object.keys(sails.config.crontab).forEach(function(key) {
-      var val = sails.config.crontab[key];
-      schedule.scheduleJob(key, val);
-  });
+  var CronJob = require('cron').CronJob;
+
+  new CronJob(
+    '*/3 * * * *', function(){
+      require('../crontab/update.js').run();
+    },true, 'America/Los_Angeles'
+  );
 
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)

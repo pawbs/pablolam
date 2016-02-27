@@ -122,7 +122,7 @@ module.exports = {
       lastfm.request('user.getLovedTracks', {
         user: 'pb_overflow',
         page: page,
-        limit: 9999999,
+        limit: 1000,
         handlers: {
             success: getScrobbleResponse,
             error: function(error) {
